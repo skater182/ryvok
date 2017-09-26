@@ -1,0 +1,115 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+
+.map-wrapper
+	position: relative
+	&.hidden
+		opacity: 0
+		transition: .25s
+#map
+	height: 540px
+.map-block
+	position: absolute
+	left: 20px
+	top: 20px
+	border-radius: 10px
+	background: #302f2c
+	z-index: 100
+	padding: 50px 40px
+	display: inline-block
+	color: #fff
+	font-size: 18px
+	line-height: 20px
+	p
+		margin: 0
+		margin-bottom: 10px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		left: 0
+		background:  url('../img/map-logo.png') no-repeat center center
+		background-size: 100% auto
+		opacity: .1
+
+
+.content-block
+	padding-left: 0
+	padding-bottom: 0
+	padding-right: 0
+
+.select-block,.place-logo,.place-address
+	padding-left: 60px
+	padding-right: 90px
+
+.submit-block
+	text-align: center
+.submit-btn 
+	margin-top: 15px
+	margin-bottom: 40px
+	display: inline-block
+	position: relative
+	padding: 10px 20px
+	cursor: pointer
+	.text
+		font-size: 11px
+		font-weight: bold
+		font-style: italic
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 2px
+		line-height: 1
+		position: relative
+		z-index: 1
+	.default-bg
+		transition: .25s
+		svg
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			left: 0
+		.bd
+			stroke: #fff
+	.hover-bg
+		svg
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			left: 0
+			height: 100%
+		.bd-fill
+			fill: #fff
+		opacity: 0
+		transition: .25s
+
+	&:hover
+		.default-bg 
+			opacity: 0
+			transition: .25s
+		.hover-bg
+			opacity: 1
+			transition: .25s
+		.text
+			color: $main-site-color
+
+@media (max-width: 767px)
+	.select-block,.place-logo,.place-address
+		padding: 0
+	.place-logo
+		display: block
+	.place-address
+		display: block
+		p
+			display: none
+	#map
+		height: 350px
+
+@media (max-width: 767px) and (orientation: landscape)
+	#map
+		height: 300px

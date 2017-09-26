@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Рывок
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/post.css")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnTMrJ-8wzzDvHB-LMmiS8EyQpoBJoo0")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_blog.pug
+		.main-wrapper
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+			.page-title-bg
+				img(src="img/post/post_title_bg.jpg", alt="")
+			.inner-page-title
+				.page-title 
+					.post-date 16.11.2017
+					.title-text Наша фитнес-программа делает шоу на #[br] национальном канале
+					.tags
+						a.tag(href="#") #Мероприятие
+
+			.content-block
+				.post-wrapper
+					p У любой организации (семьи, школы, корпорации, муниципалитета, правительства страны) возникает естественная необходимость что-то контролировать или запрещать. Цели могут быть самыми разными — от ангельских до дьявольских. Нас интересуют способы, с помощью которых можно воплощать в жизнь тот или иной запрет, не вызывая раздражения у тех, кого контролируют или ограничивают.
+					.insert-block Шлагбаум — некрасивый запрет. Выезжающий из дороги пень (боллард) — изящная преграда для автомобиля, на которую пешеход не обратит внимания.
+					p Если читатель решит стереть все письма на «Гмейле», ему будет очень непросто. Потому что «Гугл» хочет хранить письма в мусорной корзине вечно, а когда объем почтового ящика подойдет к пределу, выдаст еще места на диске. Если читатель решит поработать с финансовыми таблицами без интернета, ничего не получится. «Гугл» предоставляет пользователю доступ только к той информации, которая хранится в самом «Гугле». Для чего это нужно? Все письма, файлы, ссылки, поисковые запросы, местонахождения и др. привязаны к конкретному человеку и позволяют лучше понимать, что ему нужно — какую рекламу показывать, какие результаты выдавать раньше других.
+					.post-inner-slider
+						.next
+							.standart
+								include ../img/svg/slider-arrow.svg
+							.hover
+								include ../img/svg/slider-arrow-hover.svg
+						.prev
+							.standart
+								include ../img/svg/slider-arrow.svg
+							.hover
+								include ../img/svg/slider-arrow-hover.svg
+						.owl-carousel
+							.item
+								img(src="img/post/post-slide.jpg", alt="")
+							.item
+								img(src="img/post/post-slide.jpg", alt="")
+							.item
+								img(src="img/post/post-slide.jpg", alt="")
+							.item
+								img(src="img/post/post-slide.jpg", alt="")
+					p Потому что «Гугл» хочет хранить письма в мусорной корзине вечно, а когда объем почтового ящика подойдет к пределу, выдаст еще места на диске. Если читатель решит поработать с финансовыми таблицами без интернета, ничего не получится. «Гугл» предоставляет пользователю доступ только к той информации, которая хранится в самом «Гугле». Для чего это нужно? Если читатель решит стереть все письма на «Гмейле», ему будет очень непросто. Все письма, файлы, ссылки, поисковые запросы, местонахождения и др. привязаны к конкретному человеку и позволяют лучше понимать, что ему нужно — какую рекламу показывать, какие результаты выдавать раньше других.
+					p #[img(src="img/post/post-text-image.jpg", alt="")] Потому что «Гугл» хочет хранить письма в мусорной корзине вечно, а когда объем почтового ящика подойдет к пределу, выдаст еще места на диске. Если читатель решит поработать с финансовыми таблицами без интернета, ничего не получится. «Гугл» предоставляет пользователю доступ только к той информации, которая хранится в самом «Гугле». Для чего это нужно? Если читатель решит стереть все письма на «Гмейле», ему будет очень непросто. Все письма, файлы, ссылки, поисковые запросы, которая хранится в самом «Гугле».
+					p Потому что привязаны к конкретному человеку и позволяют лучше понимать, что ему нужно — какую рекламу показывать, какие результаты выдавать раньше других.
+					.video-block
+						iframe(width="100%" src="https://www.youtube.com/embed/WfO9lpbbW_4" frameborder="0" allowfullscreen)
+					p Или другой пример — прописка. Эта унизительная русская процедура привязывания крепостного к своей деревне. В свободной Америке такого нет. А что будет, если мы решим записаться в американскую библиотеку или поступить в университет? Нас попросят показать пару конвертов, адресованных нам и полученных в течение нескольких месяцев по адресу, который мы заявим как наш. Абонентский ящик не подойдет, нужен физический адрес. Факт получения на этот адрес корреспонденции в течение определенного времени говорит контролирующей организации, что мы к этому адресу имеем отношение.
+					.bottom-block
+						.tags Метка записи:
+							a.tag(href="#") #мероприятия
+						.share Поделиться записью:
+							a.item(href="#")
+								include ../img/svg/fb-icon.svg
+							a.item(href="#")
+								include ../img/svg/twitter-icon.svg
+							a.item(href="#")
+								include ../img/svg/google-icon.svg
+							a.item(href="#")
+								include ../img/svg/vk-icon.svg
+							a.item(href="#")
+								include ../img/svg/insta-icon.svg
+				.other-posts
+					.title Другие записи:
+					.posts-slider
+						.owl-carousel
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post1-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Новые кроссы от «Рывка» уже на складе в Киеве!
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post3-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Наш новый филиал ждет всех желающих в Сан-Тропе!
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post2-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Наши рекордсмены собрались взять новый рекорд!
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post1-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Новые кроссы от «Рывка» уже на складе в Киеве!
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post3-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Наш новый филиал ждет всех желающих в Сан-Тропе!
+							.item
+								a(href="#")
+									.line-1
+									.line-2
+									.line-3
+									.line-4
+									.photo
+										img(src="img/blog/post2-prev.jpg", alt="")
+									.post-desc
+										.date 16.11.2017
+										.title Наши рекордсмены собрались взять новый рекорд!
+
+			include parts/footer.pug

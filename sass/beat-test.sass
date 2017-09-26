@@ -1,0 +1,1078 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons";
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+.b-lazy
+	transition: opacity 5s ease-in-out
+	max-width: 100%
+	opacity: 0
+.b-lazy.b-loaded
+	opacity: 1
+
+@keyframes pulseWave
+	0%
+		transform: translateY(10px)
+	50%
+		transform: translateY(6px)
+	75%
+		transform: translateY(12px)
+	100%
+		ransform: translateY(2px)
+
+
+.ask .fixed-btn, .get-lesson .fixed-btn
+	fill: $red
+
+.get-lesson:hover .fixed-btn, .ask:hover .fixed-btn
+	fill: $red
+
+.screen-title
+	color: $red
+.fixed-btn
+	fill: $main-site-color
+	opacity: 1
+
+.screen
+	height: 100vh
+	overflow: hidden
+	position: relative
+	min-height: 768px
+
+.main-wrapper
+	overflow-x: hidden
+
+.first-screen
+	background: #000 url('../img/poster.jpg')
+	background-size: cover
+	.video-screen
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		video
+			transform: scale(1.15)
+	.play-btn
+		text-align: center
+		background: #1a191b
+		border-radius: 50%
+		width: 66px
+		height: 66px
+		margin: 0 auto
+		position: relative
+		cursor: pointer
+		img
+			height: 100%
+			width: 100%
+			position: relative
+			z-index: 2
+		.hover
+			opacity: 0
+			transition: .25s
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+		&:hover
+			.hover
+				opacity: 1
+				transition: .25s
+			.default
+				opacity: 0
+				transition: .25s
+		.pulse
+			border: 1px solid #585a5d
+			border-radius: 50%
+			position: absolute
+			z-index: 1
+			&.first
+				top: -33px
+				left: -33px
+				animation: pulse 3s
+				animation-iteration-count: infinite
+				width: 130px
+				height: 130px
+			&.second
+				top: -43px
+				left: -43px
+				animation: pulse 3s .7s
+				animation-iteration-count: infinite
+				width: 150px
+				height: 150px
+			&.third
+				top: -53px
+				left: -53px
+				animation: pulse 3s 1.4s
+				animation-iteration-count: infinite
+				width: 170px
+				height: 170px
+	.first-content-block
+		display: inline-block
+		position: absolute
+		bottom: calc(50% - 300px)
+		left: calc(50% - 500px)
+	.first-text
+		display: inline-block
+		text-align: center
+		margin-bottom: 55px
+	.top-text
+		padding: 11px 22px
+		background: #e40823
+		color: #fff
+		font-weight: bold
+		font-size: 16px
+		display: inline-block
+		text-transform: uppercase
+		line-height: 1
+		letter-spacing: 3px
+		width: 100%
+		position: relative
+		margin-bottom: 10px
+		.line1
+			background: #e40823
+			width: 130px
+			height: 1px
+			position: absolute
+			left: 100%
+			top: 50%
+			transform: translateY(-50%)
+		.line2
+			background: #e40823
+			width: 130px
+			height: 1px
+			position: absolute
+			left: calc(100% + 110px)
+			top: -27px
+			transform: rotate(-45deg)
+			&::after
+				content: ''
+				position: absolute
+				left: 100%
+				top: 50%
+				transform: translateY(-50%)
+				width: 10px
+				height: 10px
+				background: #fff
+				border-radius: 50%
+	.bottom-text
+		font-size: 62px
+		font-weight: bold
+		font-style: italic
+		color: #fff
+		text-transform: uppercase
+		line-height: .75
+		letter-spacing: -8px
+		word-spacing: 10px
+		text-indent: -12px
+		p
+			margin: 0
+		span
+			color: #e40823
+
+.second-screen
+	text-align: center
+	position: relative
+	background: #181818
+	.front-block
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		position: relative
+		z-index: 10
+	.second-bottom
+		position: relative
+		top: 100px
+	.second-scr-bg
+		background: #181818
+	.second-screen-logo
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			left: 0
+			background: rgb(24,24,24)
+			z-index: 3
+
+	.flashlight
+		width: 500px
+		height: 500px
+		position: absolute
+		background: #181818 url('../img/beat/second-bg.jpg') no-repeat
+		box-shadow: inset 20px 20px 120px 70px rgba(24,24,24,1)
+		border-radius: 50%
+		&::after
+			content: ''
+			position: absolute
+			top: -5px
+			bottom: -5px
+			left: -5px
+			right: -5px
+			background: rgba(24,24,24,.7)
+			border-radius: 50%
+	.center-block
+		text-transform: uppercase
+		font-family: "OswaldDemi",sans-serif
+		font-size: 44px
+		color: #fff
+		line-height: 60px
+		letter-spacing: 2px
+		.orange
+			color: #d51215
+
+	.beat-logo
+		text-align: center
+		position: absolute
+		top: 115px
+		left: 50%
+		transform: translateX(-50%)
+	.top-svg
+		width: 50px
+		height: 30px
+		display: inline-block
+		.st0
+			fill: #b52729
+			animation: .8s pulseWave alternate infinite
+		.st0:nth-child(1)
+			animation: 1s pulseWave alternate infinite
+		.st0:nth-child(2)
+			animation: .6s pulseWave alternate infinite
+		.st0:nth-child(3)
+			animation: 1.3s pulseWave alternate infinite
+		.st0:nth-child(4)
+			animation: .8s pulseWave alternate infinite
+		.st0:nth-child(5)
+			animation: 1.2s pulseWave alternate infinite
+		.st0:nth-child(6)
+			animation: .8s pulseWave alternate infinite
+	.bottom-svg
+		height: 50px
+		width: 132px
+		.st0
+			fill: #b52729
+.watch-video-btn
+	text-transform: uppercase
+	font-size: 13px
+	color: #fff
+	font-weight: bold
+	font-style: italic
+	text-align: center
+	position: relative
+	padding: 15px 55px
+	line-height: 1
+	margin-bottom: 25px
+	cursor: pointer
+	.text
+		position: relative
+		z-index: 2
+	svg
+		position: absolute
+		width: 100%
+		left: 0
+		top: 0
+		height: 100%
+		bottom: 0
+	.bg
+		.bd
+			stroke: $red
+	.hover-bg
+		opacity: 0
+		transition: .1s
+		.bd-fill
+			fill: $red
+	&:hover
+		.hover-bg
+			opacity: 1
+			transition: .1s
+
+.speakers
+	&.first
+		top: 55px
+		left: 50px
+		position: absolute
+	&.second
+		bottom: 55px
+		left: 50px
+		position: absolute
+	&.third
+		top: 55px
+		right: 50px
+		position: absolute
+	&.fourth
+		bottom: 55px
+		right: 50px
+		position: absolute
+	.speaker
+		margin-bottom: 40px
+		&::after
+			position: absolute
+			right: -20px
+			content: ''
+			top: -20px
+			bottom: -20px
+			left: -20px
+			background: rgba(24,24,24,.6)
+			border-radius: 50%
+		&:last-child
+			margin-bottom: 0
+		animation-duration: .3s !important
+
+.third-screen
+	background: url('../img/ts-image.jpg') no-repeat
+	background-size: 100% 100%;
+
+.cool-slider
+	height: 100%
+	.owl-item
+		&.active
+			.item
+				.number,.text-block
+					opacity: 1
+				.text-block
+					transition: .8s .2s
+
+	.item
+		position: relative
+		width: 100%
+		float: left
+		height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0 15%
+		.photo-bg
+			position: absolute
+			width: 100%
+			left: 0
+			bottom: 0
+			top: 0
+			overflow: hidden
+			img
+				min-width: 100%
+				min-height: 100%
+				width: auto
+			&::after
+				content: ''
+				position: absolute
+				background: rgba(42,42,42,.9)
+				top: 0
+				bottom: 0
+				width: 100%
+				left: 0
+		.text-block
+			max-width: 100%
+			z-index: 10
+			text-align: center
+			color: #fff
+			font-size: 41px
+			font-style: italic
+			font-weight: 500
+			text-shadow: 0px 2px 0px #070708
+			line-height: 60px
+			opacity: 0
+			transition: .3s .9s
+			width: 100%
+			.orange
+				color: $red
+			.logo
+				display: inline-block
+				margin-bottom: 25px
+				text-align: center
+				.bottom
+					width: 90px
+					margin-top: -15px
+				.top
+					width: 47px
+					height: 19px
+					display: inline-block
+				img
+					width: auto
+
+	.owl-prev, .owl-next
+		position: absolute
+		text-indent: -9999px
+		top: 50%
+		width: 41px
+		height: 76px
+		z-index: 2
+		transition: .25s
+		&::before
+			content: ''
+			position: absolute
+			z-index: 5
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			background: url('../img/svg/slider-arrow.svg') no-repeat
+			background-size: 100% 100%
+			transition: .25s
+		&::after
+			content: ''
+			position: absolute
+			z-index: 5
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			background: url('../img/svg/slider-arrow-hover.svg') no-repeat
+			background-size: 100% 100%
+			opacity: 0
+			transition: .25s
+		&:hover
+			transition: .25s
+			&::before
+				opacity: 0
+				transition: .25s
+			&::after
+				opacity: 1
+				transition: .25s
+
+	.owl-prev 
+		left: 50px
+		transform: translateY(-50%)
+	.owl-next
+		right: 50px
+		transform: translateY(-50%) rotate(180deg)
+
+	.owl-carousel.owl-loaded
+		height: 100%
+
+	.owl-dots
+		position: absolute
+		left: calc(50% + 30px)
+		top: 5.36%
+		border-radius: 50px;
+		background: rgba(0,0,0,.2)
+		padding: 6px 13px
+		transform: translateX(-50%)
+		&::before
+			content: 'ФАКТЫ:'
+			color: #fff
+			font-size: 19px
+			font-weight: bold
+			right: calc(100% + 15px)
+			position: absolute
+		.owl-dot
+			display: inline-block
+			font-size: 19px
+			color: #fff
+			margin: 0 7px
+			&.active
+				color: $red
+
+.fourth-screen
+	background: url('../img/ryvok-fon.jpg') no-repeat center center
+	background-size: cover
+	.screen-title
+		margin-bottom: 40px
+
+.result-slider
+	height: 100%
+	.owl-nav
+		.disabled
+			opacity: 0
+	.owl-prev,.owl-next
+		position: absolute
+		width: 41px
+		height: 76px
+		text-indent: -9999px
+		&::before
+			content: ''
+			position: absolute
+			z-index: 5
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			background: url('../img/svg/slider-arrow.svg') no-repeat
+			background-size: 100% 100%
+			transition: .25s
+		&::after
+			content: ''
+			position: absolute
+			z-index: 5
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			background: url('../img/svg/slider-arrow-hover.svg') no-repeat
+			background-size: 100% 100%
+			opacity: 0
+			transition: .25s
+		&:hover
+			transition: .25s
+			&::before
+				opacity: 0
+				transition: .25s
+			&::after
+				opacity: 1
+				transition: .25s
+	.owl-prev
+		top: 50%
+		transform: translateY(-50%)
+		left: 110px
+	.owl-next
+		top: 50%
+		transform: translateY(-50%) rotate(180deg)
+		right: 110px
+	.owl-item.active
+		transition: .4s
+	.owl-item:not(.active)
+		transform: translateY(25%)
+		transition: .4s
+		.review-text
+			opacity: 0
+		img
+			zoom: .8
+			transition: .4s
+			position: relative
+		.before-photo,.after-photo
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				left: -5px
+				right: -5px
+				top: -5px
+				bottom: -5px
+				background: rgba(0,0,0,.4)
+
+	.item
+		width: 770px
+		margin: 0 auto
+		position: relative
+		.top-block
+			position: relative
+			overflow: hidden
+		.before-photo
+			margin-right: 35px
+			float: left
+			border: 5px solid #ececec
+			position: relative
+			img
+				height: 450px
+			&::before
+				position: absolute
+				content: 'ДО:'
+				left: calc(100% + 15px)
+				top: 0
+				color: #fff
+				font-size: 20px
+
+		.after-photo
+			position: relative
+			&::before
+				position: absolute
+				content: 'ПОСЛЕ:'
+				right: calc(100% + 15px)
+				top: 0
+				color: #fff
+				font-size: 20px
+			float: right
+			margin-left: 35px
+			border: 5px solid #fff
+			img
+				height: 450px
+		.contacts
+			position: absolute
+			width: 100%
+			text-align: center
+			top: 50%
+			transform: translateY(-50%)
+			img
+				display: inline-block
+				width: auto
+		.name-age
+			font-size: 20px
+			text-align: center
+			font-style: italic
+			color: #fff
+			margin-bottom: 20px
+		.soc-icons
+			text-align: center
+			a
+				margin: 0 5px
+				display: inline-block
+				transition: .3s
+				svg
+					height: 43px
+					width: 43px
+					path
+						transition: .3s
+				&:hover
+					transform: scale(1.1)
+					transition: .3s
+					svg
+						path
+							fill: $red
+							transition: .3s
+		.review-text
+			position: relative
+			margin-top: 30px
+			padding: 0 50px
+			float: left
+			max-width: 100%
+			font-style: italic
+			font-size: 17px
+			color: #fff
+			font-weight: 300
+			line-height: 30px
+			&::after
+				position: absolute
+				content: ''
+				width: 41px
+				height: 40px
+				background: url('../img/quotes.png')
+				top: -18px
+				left: 0
+				opacity: .2
+			a
+				color: $red
+				font-style: normal
+				display: inline-block
+				margin-left: 5px
+
+.fifth-screen
+	background: #000
+	.screen-title
+		margin-top: 30px
+	.abonements
+		padding-left: 30px
+		.item
+			.title
+				text-decoration: none
+				pointer-events: none
+				display: block
+			&:hover
+				cursor: pointer
+				z-index: 10
+				.title
+					color: $red
+					text-decoration: none
+				.details-link
+					opacity: 1
+					transition: .25s
+					color: $red
+					svg
+						.bd
+							stroke: $red
+				.photo
+					transform: scale3d(1,1,1)
+					transition: .4s
+					opacity: 1
+
+			width: 30%
+			float: left
+			height: 100vh
+			position: relative
+			.photo
+				position: absolute
+				width: 100%
+				top: 0
+				bottom: 0
+				left: 0
+				transform: scale3d(0,0,1)
+				transition: .4s
+				opacity: 0
+			.content
+				width: 100%
+				margin: 0 auto
+			&.first
+				margin-top: -75px
+				z-index: 4
+				.content
+					margin-top: 190px
+				.photo
+					top: 30px
+			&.second
+				margin-top: 30px
+				margin-left: -120px
+				z-index: 3
+				.content
+					margin-top: 350px
+				.photo
+					bottom: 120px
+					top: auto
+			&.third
+				z-index: 2
+				width: 35%
+				margin-top: -135px
+				margin-left: -100px
+				.content
+					// width: 75%
+					margin: 0 auto
+					margin-top: 315px
+				.photo
+					top: 130px
+			&.fourth
+				z-index: 1
+				margin-left: -120px
+				margin-top: 50px
+				.content
+					margin-top: 350px
+				.photo
+					top: 110px
+			.title
+				color: #fff
+				font-size: 73px
+				text-transform: uppercase
+				font-family: 'OswaldDemi',sans-serif
+				letter-spacing: -3px
+				text-align: center
+				position: relative
+				z-index: 1
+			.desc
+				color: #fff
+				font-weight: 300
+				font-style: italic
+				font-size: 16px
+				margin-top: 20px
+				margin-bottom: 20px
+				position: relative
+				z-index: 1
+				letter-spacing: .5px
+				padding: 0 60px
+				line-height: 20px
+			.details-link
+				display: inline-block
+				font-size: 11px
+				text-transform: uppercase
+				font-weight: bold
+				font-style: italic
+				color: #fff
+				text-decoration: none
+				letter-spacing: 2px
+				padding: 12px 25px
+				line-height: 1
+				text-align: left
+				position: relative
+				z-index: 1
+				opacity: 0
+				transition: .25s
+				svg
+					position: absolute
+					top: 0
+					bottom: 0
+					width: 100%
+					left: 0
+					.bd
+						fill: #fff
+						fill-opacity: 0
+						transition: .25s
+						stroke: #fff
+				span
+					position: relative
+					z-index: 2
+				&:hover
+					color: #fff !important
+					svg
+						.bd
+							fill: $red
+							fill-opacity: 1
+							transition: .25s
+.sixth-screen
+	background: url('../img/ryvok-fon.jpg') no-repeat center center
+	background-size: cover
+	padding-left: 65px
+	padding-right: 42px
+	.screen-title
+		margin-bottom: 50px
+
+	.answers
+		float: left
+		width: 100%
+		.item
+
+			margin-bottom: 60px
+			color: #fff
+			float: left
+			width: 100%
+			.answer,.question
+				background: rgba(0,0,0,.2)
+			.answer
+				font-size: 17px
+				line-height: 22px
+				font-weight: 300
+				margin-left: 45px
+				padding: 22px
+				border: 2px solid $red
+				border-radius: 20px
+				border-top-right-radius: 0
+				position: relative
+				margin-right: 70px
+				.answer-text
+					max-height: 66px
+					overflow: hidden
+					text-overflow: ellipsis
+				.full-answer-link 
+					text-transform: uppercase
+					font-size: 11px
+					color: $red
+					display: inline-block
+					margin-top: 20px
+					letter-spacing: 1px
+				&::after
+					content: ''
+					position: absolute
+					width: 16px
+					height: 29px
+					background: url('../img/answer-sign-r.png') no-repeat
+					bottom: 100%
+					left: calc(100% + 5px)
+					z-index: 1
+			.question
+				font-size: 20px
+				font-weight: 300
+				font-style: italic
+				line-height: 25px
+				padding: 20px 17px;
+				margin-right: 45px
+				margin-left: 16px
+				border: 2px solid #fff
+				border-radius: 20px
+				border-top-left-radius: 0
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 16px
+					height: 29px
+					background: url('../img/question-sign.png')
+					bottom: 100%
+					right: calc(100% + 5px)
+					z-index: 1
+			.q-wrapper,.a-wrapper
+				width: 50%
+				float: left
+			.q-wrapper
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 16px
+					height: 29px
+					background: url('../img/question-sign.png')
+					bottom: 100%
+					right: calc(100% + 5px)
+					z-index: 1
+					display: none
+			.a-wrapper
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 16px
+					height: 29px
+					background: url('../img/answer-sign-r.png') no-repeat
+					bottom: 100%
+					left: calc(100% + 5px)
+					z-index: 1
+					display: none
+
+.seventh-screen
+	background: url('../img/ryvok-fon.jpg') no-repeat center center
+	background-size: 100% 100%
+	.board
+		height: 100vh
+		width: 100%
+		.item
+			height: 50%
+			width: 25%
+			overflow: hidden
+			float: left
+			position: relative
+			& > a 
+				display: block
+			&.big
+				width: 50%
+			&:hover
+				cursor: pointer
+				.photo
+					img
+						transform: scale(1.1)
+						transition: .6s
+				.text
+					background: rgba(213, 18, 21, 0.8)
+					transition: .4s
+			.photo
+				height: 100%
+				img
+					min-width: 100%
+					transition: .6s
+					min-height: 100%
+			.text
+				position: absolute
+				bottom: 0
+				width: 100%
+				background: rgba(0,0,0,.2)
+				text-align: center
+				height: 90px
+				display: flex
+				align-items: center
+				justify-content: center
+				text-shadow: 1px 2px 1px rgba(0,0,0,.6)
+				line-height: 30px
+				padding: 0 20px
+				transition: .4s
+				a
+					font-size: 23px
+					color: #fff
+					font-family: "Oswald",sans-serif
+					text-decoration: none
+				.tags
+					position: absolute
+					width: 100%
+					top: -13px
+					text-align: center
+					left: 0
+					.tag
+						margin: 0 5px
+						height: 23px
+						display: inline-block
+						background: url('../img/svg/dokinul-tag-previews.svg') no-repeat
+						color: $red
+						text-shadow: none
+						padding: 0 20px
+						text-transform: uppercase
+						font-weight: bold
+						font-size: 12px
+						line-height: 22px
+						letter-spacing: 1px
+						font-family: Ubuntu, sans-serif
+
+		.review-block
+			.text-block
+				position: absolute
+				width: 100%
+				top: 0
+				bottom: 0
+				left: 0
+				text-align: center
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				padding: 0 30px
+				font-size: 21px
+				line-height: 35px
+			.quotes
+				margin-bottom: 20px
+			.review-text
+				font-style: italic
+				font-weight: bold
+				text-transform: uppercase
+				color: #464646
+				margin-bottom: 15px
+			.link
+				font-size: 12px
+				color: #464646
+				font-style: italic
+				display: inline-block
+				line-height: 17px
+				text-decoration: none
+
+
+.item .active .st0
+	fill: #ff4800
+
+.sm-mrg.teens
+	margin-bottom: 10px
+
+.sm-mrg.blog
+	margin-bottom: 6px
+
+.video-popup
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(0,0,0,.6)
+	z-index: 1000
+	transform: scale3d(0,0,1)
+	transition: .25s
+	border-radius: 5px
+	overflow: hidden
+	.close-button
+		position: absolute
+		top: 15px
+		right: 15px
+		background: url('../img/close-menu-icon.png') no-repeat center center
+		width: 45px
+		height: 45px
+		cursor: pointer
+		z-index: 3
+		pointer-events: none
+	&.active
+		transform: scale3d(1,1,1)
+		transition: .25s
+	video
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		transform: scale(1.25)
+		opacity: 0
+		cursor: pointer
+		&.current
+			opacity: 1
+.video-popup-teaser
+	position: fixed
+	top: calc(50% - 312px)
+	left: calc(50% - 450px)
+	width: 900px
+	height: 625px
+	background: rgba(0,0,0,.6)
+	z-index: 1000
+	transform: scale3d(0,0,1)
+	transition: .25s
+	border-radius: 5px
+	overflow: hidden
+	.close-button
+		position: absolute
+		top: 15px
+		right: 15px
+		background: url('../img/close-menu-icon.png') no-repeat center center
+		width: 45px
+		height: 45px
+		cursor: pointer
+		z-index: 3
+	&.active
+		transform: scale3d(1,1,1)
+		transition: .25s
+	video
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		transform: scale(1.25)
+
+.side-menu.main .side-menu-inner::after
+	height: calc(100% - 370px)
+
+.side-menu.main .side-menu-inner::before
+	height: 390px
+
+@media(min-width: 1441px)
+	.fifth-screen
+		.abonements
+			.item.fourth
+				margin-left: -150px

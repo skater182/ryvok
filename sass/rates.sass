@@ -1,0 +1,588 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons";
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+.content-block
+	padding-top: 55px
+	background: #fff
+
+.inner-page-title 
+	.page-title
+		color: #fff
+	.page-subtitle
+		position: absolute
+		top: 70px
+		font-size: 20px
+		font-family: "Ubuntu",sans-serif
+		font-style: italic
+		font-weight: bold
+		text-transform: uppercase
+		text-shadow: none
+		letter-spacing: 4px
+		left: 50%
+		transform: translateX(-50%)
+
+.other-rates
+	position: relative
+	z-index: 10
+	.text
+		position: absolute
+		bottom: calc(100% + 10px)
+		left: 50%
+		transform: translateX(-50%)
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-transform: uppercase
+		z-index: 2
+	.rates-list
+		background: $main-site-color
+		padding: 10px 0
+		text-align: center
+		&.fixed
+			position: fixed
+			top: 0
+			width: calc(100% - 165px)
+			left: 165px
+			z-index: 100
+		.rate
+			display: inline-block
+			color: #fff
+			font-size: 17px
+			font-weight: bold
+			font-style: italic
+			text-transform: uppercase
+			margin: 0 50px
+			transition: .25s
+			&:hover
+				transform: scale(1.1)
+				transition: .25s
+
+.relate-programms
+	text-align: center
+	margin-bottom: 80px
+	.text
+		text-transform: uppercase
+		font-size: 15px
+		font-weight: 500
+		color: $main-site-color
+		margin-bottom: 15px
+		letter-spacing: 1px
+		span
+			color: #00b7f4
+			font-size: 25px
+			text-transform: uppercase
+			letter-spacing: 1px
+			display: inline-block
+			margin: 3px 0
+	.item
+		display: inline-block
+		margin: 0 20px
+		&.ryvok
+			width: 95px
+			height: 40px
+			path
+				fill: $main-site-color
+		&.beat
+			width: 85px
+			height: 33px
+			.st0
+				fill: #e30613
+
+.card-block
+	padding-left: 190px
+	padding-right: 55px
+	position: relative
+	max-width: 1600px
+	margin: 0 auto
+	margin-bottom: 100px
+
+	&.ready.lifestyle
+		.card-items-inner
+			.card-item.drop
+				&:nth-child(5)
+					transform: translateY(0) !important
+					transition: 1s .5s ease-out
+				&:nth-child(4)
+					transform: translateY(0) !important
+					transition: 1s 1s ease-out
+				&:nth-child(3)
+					transform: translateY(0) !important
+					transition: 1s 1.5s ease-out
+				&:nth-child(2)
+					transform: translateY(0) !important
+					transition: 1s 2s ease-out
+				&:nth-child(1)
+					transform: translateY(0) !important
+					transition: 1s 2.5s ease-out
+	&.ready
+		.card-desc
+			opacity: 1 !important
+		.card-items-inner
+			transition: 2s cubic-bezier(0, 1, 0, 1)
+			max-height: 2000px
+			padding-top: 10px
+			.card-item.drop
+				.card-desc
+					transition: 3s
+				&:first-child
+					.title-line
+						width: 180px
+				&:nth-child(2)
+					.title-line
+						width: 240px
+				&:nth-child(3)
+					.title-line
+						width: 290px
+				&:nth-child(4)
+					.title-line
+						width: 240px
+				&:nth-child(5)
+					.title-line
+						width: 270px
+				.card-desc
+					opacity: 1 !important
+					transition: 3s
+				opacity: 1
+				&:nth-child(4)
+					transform: translateY(0) !important
+					transition: 1s .5s ease-out
+				&:nth-child(3)
+					transform: translateY(0) !important
+					transition: 1s 1s ease-out
+				&:nth-child(2)
+					transform: translateY(0) !important
+					transition: 1s 1.5s ease-out
+				&:nth-child(1)
+					transform: translateY(0) !important
+					transition: 1s 2s ease-out
+		.card-bottom
+			top: 50px
+			
+	.card-items-inner
+		transition: 3s cubic-bezier(0, 1, 0, 1)
+		overflow: hidden
+		float: left
+		.card-desc
+			margin-top: 55px
+			opacity: 0
+		.card-item
+			opacity: 0
+	.card-top
+		position: relative
+		z-index: 2
+	.card-bottom
+		position: relative
+		top: -160px
+		left: 0
+	.discount-block
+		position: absolute
+		left: 40px
+		top: 100px
+		transform: translateY(-50%)
+		background: url(../img/svg/discount.svg)
+		width: 121px
+		height: 123px
+		z-index: 2
+		color: $main-site-color
+		font-size: 60px
+		font-family: "OswaldDemi",sans-serif
+		line-height: 1
+		display: flex
+		align-items: center
+		letter-spacing: -2px
+		justify-content: center
+		padding-right: 30px
+		padding-bottom: 5px
+		span
+			font-size: 20px
+			position: absolute
+			top: 35px
+			right: 15px
+	.card-item
+		clear: both
+		margin-top: 50px
+		float: left
+		width: 100%
+		// &.with-gift
+		// 	margin-bottom: 0
+		&.gift
+			.card-desc
+				margin-top: 120px
+		.title-line
+			height: 1px
+			background: $main-site-color
+			position: absolute
+			right: calc(100% + 35px)
+			top: 50%
+			width: 100px
+			transform: translateY(-50%)
+			z-index: 10
+			transition: 7s 2s
+			&::after
+				position: absolute
+				background: url('../img/rates/little_circle.png') left
+				width: 7px
+				height: 7px
+				content: ''
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				z-index: 10
+		.card-image
+			width: calc(50% - 150px)
+			margin-right: 150px
+			float: left
+			text-align: center
+			img
+				vertical-align: bottom
+		.card-desc
+			width: 50%
+			float: left
+			transition: 2s
+			position: relative
+			z-index: 20
+			opacity: 0
+		.card-item-title 
+			color: $main-site-color
+			font-size: 26px
+			font-style: italic
+			font-weight: bold
+			margin-bottom: 10px
+			position: relative
+		.card-item-text
+			font-size: 17px
+			letter-spacing: 1px
+			line-height: 25px
+			margin-bottom: -15px
+			span
+				color: #00b7f4
+				font-weight: bold
+
+.insert-block
+	padding: 45px 0
+	background: url('../img/rates/plus.jpg') no-repeat
+	background-position: -100px
+	position: relative
+	margin-bottom: 40px
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		left: 0
+		top: 0
+		bottom: 0
+		background: rgba(0,0,0,.7)
+	.insert-block-inner
+		position: relative
+		display: flex
+		z-index: 2
+		.plus-sign
+			width: 440px
+			background: url('../img/svg/plus.svg') no-repeat center center
+		.items
+			.item
+				font-size: 29px
+				font-weight: 500
+				font-style: italic
+				color: #fff
+				letter-spacing: 1px
+				line-height: 1
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+
+.order-block
+	padding-top: 60px
+	padding-bottom: 70px
+	text-align: center
+	background: url('../img/rates/t-shirt.png') no-repeat left -140px top,url('../img/rates/bracelet.png') no-repeat right center
+	.price
+		font-size: 90px
+		color: #fff
+		font-style: italic
+		display: inline-block
+		line-height: 1
+		padding: 0 25px
+		letter-spacing: -5px
+		padding-left: 10px
+		position: relative
+		margin-bottom: 85px
+		.text
+			position: relative
+			z-index: 2
+		svg
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			.st0
+				fill: $main-site-color
+		&::after
+			content: "грн"
+			position: absolute
+			font-size: 40px
+			color: $main-site-color
+			left: calc(100% + 10px)
+			top: 0
+			line-height: 1
+			letter-spacing: -3px
+		&.old
+			&::before
+				content: ''
+				position: absolute
+				height: 10px
+				width: 120%
+				background: #ff0000
+				transform: rotate(-12deg)
+				top: 35px
+				z-index: 10
+				left: -20px
+		&.new
+			color: #000
+			margin-top: -60px
+			margin-bottom: 45px
+			&::after
+				color: #000
+			svg
+				.st0
+					fill: #fff324
+	.order-btn
+		display: block
+		font-style: italic
+		font-weight: bold
+		color: $main-site-color
+		font-size: 13px
+		text-transform: uppercase
+		letter-spacing: 1px
+		width: 250px
+		height: 42px
+		position: relative
+		margin: 0 auto
+		margin-bottom: 20px
+		&:hover
+			svg
+				path
+					fill: $main-site-color !important
+					transition: .25s
+			.order-btn-text
+				color: #fff
+		svg
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 42px
+			.bd
+				fill: transparent
+				transition: .25s
+		.order-btn-text
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 100%
+			transform: translate(-50%,-50%)
+			line-height: 1
+			z-index: 10
+
+	.order-desc
+		font-size: 11px
+		font-weight: bold
+		color: #4b4b4b
+		text-transform: uppercase
+		letter-spacing: 1px
+
+@import "all_responsive";
+
+@media (max-width: 1024px)
+	.card-block
+		padding-left: 35px
+		.discount-block
+			z-index: 10
+			width: 80px
+			height: 80px
+			font-size: 40px
+			top: 50px
+			left: 30px
+			span
+				top: 15px
+				right: 12px
+		.card-item
+			.title-line
+				right: calc(100% + 15px)
+			.card-image
+				margin-right: 35px
+				width: calc(50% - 35px)
+				img
+					max-width: 100%
+					max-height: 230px
+			.card-item-title
+				font-size: 22px
+			.card-item-text
+				font-size: 14px
+				line-height: 20px
+				margin-bottom: 0
+		&.ready
+			.card-items-inner
+				.card-desc
+					margin-top: 25px
+				.card-item.drop
+					&:first-child
+						.title-line
+							width: 120px
+					&:nth-child(2)
+						.title-line
+							width: 160px
+					&:nth-child(3)
+						.title-line
+							width: 180px
+					&:nth-child(4)
+						.title-line
+							width: 170px
+					&:nth-child(5)
+						.title-line
+							width: 180px
+
+	.insert-block
+		background-size: cover
+		.insert-block-inner
+			.plus-sign
+				width: 150px
+				margin-left: 60px
+				margin-right: 50px
+			.items
+				.item
+					font-size: 22px
+					margin-bottom: 20px
+
+	.order-block
+		background: url("../img/rates/t-shirt.png") no-repeat left -340px top, url("../img/rates/bracelet.png") no-repeat right -100px center
+		.price
+			font-size: 74px
+			margin-bottom: 45px
+			&::after
+				font-size: 33px
+		.order-btn
+			width: 210px
+			height: 35px
+			font-size: 12px
+			svg
+				height: 37px
+
+@media (max-width: 767px)
+
+	.content-block
+		padding-top: 25px
+	.other-rates
+		.rates-list
+			line-height: 1
+			.rate
+				font-size: 12px
+				margin: 0 18px
+				vertical-align: top
+
+	.relate-programms
+		margin-bottom: 40px
+		.text
+			font-size: 11px
+			span
+				font-size: 17px
+
+	.card-block
+		padding-left: 20px
+		padding-right: 15px
+		.discount-block
+			width: 65px
+			height: 65px
+			font-size: 32px
+			text-indent: 5px
+			top: 15px
+			left: 20px
+			span
+				font-size: 15px
+		.card-item
+			margin-top: 40px
+			&:first-child
+				margin-top: 0
+			.card-image
+				width: 100%
+				margin-bottom: 25px
+			.card-desc
+				width: 100%
+			.card-item-title
+				text-align: center
+				margin-bottom: 5px
+			.card-item-text
+				text-align: center
+		&.ready
+			.card-items-inner .card-desc
+				margin-top: 0
+
+	.insert-block
+		padding: 30px 0
+		padding-bottom: 45px
+		background-position: -500px
+		margin-bottom: 0
+		.insert-block-inner
+			display: block
+			.plus-sign
+				width: 100%
+				height: 75px
+				margin-left: 0
+				margin-right: 0
+				margin-bottom: 35px
+			.items
+				.item
+					font-size: 18px
+					text-align: center
+					padding: 0 15px
+					margin-bottom: 30px
+
+	.order-block
+		background: url("../img/rates/t-shirt.png") no-repeat left -100px bottom, url("../img/rates/bracelet.png") no-repeat right -50px top -50px
+		background-size: 50% 50%
+		padding-top: 70px
+		padding-bottom: 60px
+		.price
+			font-size: 59px
+			&::after
+				font-size: 26px
+		.order-btn
+			width: 180px
+			height: 30px
+			font-size: 10px
+			svg
+				height: 30px
+		.order-desc
+			padding: 0 50px
+			font-size: 10px
+			line-height: 12px
+
+@media (max-width: 767px) and (orientation: landscape)
+	.insert-block
+		background-position: -100px
+	.order-block
+		background: url("../img/rates/t-shirt.png") no-repeat left -100px bottom, url("../img/rates/bracelet.png") no-repeat right -50px top -50px
+		background-size: 30% 50%
+	.card-block
+		.card-bottom
+			text-align: center
+		.discount-block
+			position: absolute !important
+			top: -10px !important
+			left: 120px !important
+
+
+@media (max-width: 568px) and (orientation: landscape)
+	.card-block
+		.discount-block
+			position: absolute !important
+			top: -10px !important
+			left: 70px !important

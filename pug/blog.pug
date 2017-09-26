@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Блог
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/blog.css")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnTMrJ-8wzzDvHB-LMmiS8EyQpoBJoo0")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_blog.pug
+		
+		.main-wrapper
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+
+			.page-title-bg
+				img(src="img/blog/blog_list_title_bg.jpg", alt="")
+			.inner-page-title
+				.page-title 
+					.text БЛОГ
+						.title-logo
+							include ../img/svg/menu-ryvok.svg
+
+			.content-block
+				.blog-filters.filter-buttons
+					.text Фильтровать по темам:
+					.buttons
+						.left-btn.filter-btn.active(data-filter="*") #[span Все записи] #[span.background]
+						.center-btn.filter-btn(data-filter=".motivation") #[span Мотивация] #[span.background]
+						.center-btn.filter-btn(data-filter=".event") #[span События] #[span.background]
+						.center-btn.filter-btn(data-filter=".article") #[span Статьи] #[span.background]
+						.center-btn.filter-btn(data-filter=".interview") #[span Интервью] #[span.background]
+						.right-btn.filter-btn(data-filter=".media") #[span Медиатека] #[span.background]
+				.blog-list
+					.blog-list-item.event.wow.fadeIn
+						.blog-list-image
+							.line-1
+							.line-2
+							.line-3
+							.line-4
+							.image-wrapper
+								img(src="img/blog/post1-prev.jpg", alt="")
+						.blog-list-desc
+							.blog-list-date 16.11.2017
+							a.blog-list-title(href="#") Новые кроссы от «Рывка» уже на складе в Киеве!
+							.blog-list-text Разгадка всегда была под носом. Все китайские шрифты уже установлены у нас на компьютере. И установлены очень давно, с начала 1990-х. Просто нам никогда не приходилось выбирать их из списка.
+							a.blog-list-link(href="#") Читать пост
+					.blog-list-item.article.wow.fadeIn
+						.blog-list-image
+							.line-1
+							.line-2
+							.line-3
+							.line-4
+							.image-wrapper
+								img(src="img/blog/post2-prev.jpg", alt="")
+						.blog-list-desc
+							.blog-list-date 16.11.2017
+							a.blog-list-title(href="#") Наши рекордсмены собрались взять новый рекорд!
+							.blog-list-text Сегодня ранним утром в центре города обнаружено скопление народа фитнес-телосложения, которое предвещало неминуемую потерю калорий!
+							a.blog-list-link(href="#") Читать пост
+					.blog-list-item.media.wow.fadeIn
+						.blog-list-image
+							.line-1
+							.line-2
+							.line-3
+							.line-4
+							.image-wrapper
+								img(src="img/blog/post3-prev.jpg", alt="")
+						.blog-list-desc
+							.blog-list-date 16.11.2017
+							a.blog-list-title(href="#") Наш новый филиал ждет всех желающих в Сан-Тропе!
+							.blog-list-text Мы всегда мечтали вдохнуть свежего воздуха и разделить этот вдох со всеми, чье вдохновение сопровождало нас по жизни — и вот, это стало реальностью!
+							a.blog-list-link(href="#") Читать пост
+					.blog-list-item.wow.FadeIn.promo
+						.promo-block
+							a(href="#")
+								.photo
+									img(src="img/promo-img5.jpg", alt="")
+								.text-block
+									.beat-img
+										include ../img/svg/menu-beat.svg
+									.promo-text а хочешь посещать «рывок-бит» со скидкой 50%?
+									.link #[span.link-text Пф, конечно хочу!]
+										include ../img/svg/dokinul-knopka-pff-default.svg
+
+			include parts/footer.pug

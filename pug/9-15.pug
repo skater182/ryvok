@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title "9—15"
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/rates.css")
+		link(rel="stylesheet", href="css/responsive.css")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnTMrJ-8wzzDvHB-LMmiS8EyQpoBJoo0")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+		script(src="js/rates.js")
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_inner.pug
+		
+		.main-wrapper.inner
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+
+			.page-title-bg
+				img(src="img/rates/9-15_title_bg.jpg", alt="")
+			.inner-page-title
+				.page-title "9—15"
+					.page-subtitle Абонемент
+			.other-rates
+				.text Другие абонементы:
+				.rates-list
+					a.rate(href="#") "Shape"
+					a.rate(href="lifestyle.html") "Lifestyle"
+					a.rate(href="full_forward.html") "Полный вперёд!"
+
+			.content-block
+				.relate-programms
+					.text Относится только к программе
+					.item.teens
+						img(src="img/rates/menu-teens.png", alt="")
+				.card-block.nine-fifteen
+					.card-item
+						.discount-block -30 #[span %]
+						.card-top.card-image
+							img(src="img/rates/yellow_card.png", alt="")
+						.card-desc
+							.card-item-title Рывок-абонемент
+								.title-line
+							.card-item-text Авторский курс от Максима Ярошенко — ПЕРСОНАЛЬНЫЙ подход по разработке мышц совсем круто чики-пики тыры-пыры! Входит 16 дней подготовительного периода с поеданием манной каши перед каждой третьей тренировкой. 
+					.card-items-inner
+						.card-item
+							.card-image
+								img(src="img/rates/food_tracker.png", alt="")
+							.card-desc
+								.card-item-title Персональный фуд-трекер
+									.title-line
+								.card-item-text Инкредиблский фуд-трекер, позволяющий контролировать питание шмитание бомбо-метание
+						.card-item
+							.card-image
+								img(src="img/rates/controller.png", alt="")
+							.card-desc
+								.card-item-title Контроллер посещений
+									.title-line
+								.card-item-text Ты в курсе шо курс от Максима Ярошенко — ПЕРСОНАЛЬНЫЙ подход по разработке мышц совсем круто чики-пики тыры-пыры! Входит 16 дней подготовительного периода с поеданием манной каши и здоровканьем перед каждой третьей тренировкой. Уппи-ду! Это твой шанс измениться!
+						.card-item
+							.card-image
+								img(src="img/rates/recommendation.png", alt="")
+							.card-desc
+								.card-item-title Рекомендации диетолога
+									.title-line
+								.card-item-text Невероятная как Халк, эта книга поведает нашему маленькому читателю о тяготах и лишениях и прикроет все его волнения чтобы быть на волне и не волноваться сильно, но не так чтобы слишком
+						.card-item
+							.card-image
+								img(src="img/rates/express.png", alt="")
+							.card-desc
+								.card-item-title Экспресс-рацион
+									.title-line
+								.card-item-text Нета как эта книга поведает нашему маленькому читателю о тяготах и лишениях и прикроет все его волнения чтобы быть на волне и не волноваться сильно, но не так чтобы слишком
+					.card-bottom
+						img(src="img/rates/yellow_card_shadow.png", alt="")
+				.insert-block
+					.insert-block-inner
+						.plus-sign
+						.items
+							.item – личные рекомендации Максима Ярошенко
+							.item – окружение целеустремленных людей
+							.item – навык преодоления любых препятствий
+							.item – тело, о котором ты мечтаешь!
+				.order-block
+					.price-wrapper
+						.price.old
+							.text 5 700
+							include ../img/svg/price-bg.svg
+					.price-wrapper
+						.price.new
+							.text 3 200
+							include ../img/svg/price-bg.svg
+					a.order-btn(href="#")
+						.order-btn-text Заказать абонемент
+						include ../img/svg/dokinul-knopka-podrobnee-default.svg
+					.order-desc внимание: нажатие этой кнопки изменит всё!
+			include parts/footer.pug

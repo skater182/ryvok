@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Рывок
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/reviews.css")
+		link(rel="stylesheet", href="css/responsive.css")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							.active
+								include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_inner.pug
+		.main-wrapper.inner
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+			.screen
+
+				.review-title.big-tab-visible
+					span Если тебя хватит на первых 3 минуты – ты сможешь!
+
+					.name-age Павел Дурнев, 32 года
+
+					.soc-links
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+
+				.photo
+					img(src="img/reviews/one_photo.jpg", alt="")
+
+				.review-block
+
+					a.to-all-reviews(href="#") « к другим отзывам
+
+					.review-block-inner
+
+						.review-text-inner
+
+							.review-title Если тебя хватит на первых 3 минуты – ты сможешь!
+
+							.name-age Павел Дурнев, 32 года
+
+							.soc-links
+								a(href="#" class="insta-link")
+									include ../img/svg/menu-soc-insta.svg
+								a(href="#" class="fb-link")
+									include ../img/svg/menu-soc-fb.svg
+								
+							.review-text Это просто великолепная программа! Она мне очень помогла избавиться именно от жира на животе! Тренировки просто сумасшедшие, как в переводе — это просто безумие! Всем рекомендую, тренировки из чисто кардио тренировок, программа тяжелая, проверяет выносливость, но оно того стоит! программа разделена на 2 месяца, и одной восстановительной недели между месяцами — это просто безумие! Всем рекомендую, тренировки из чисто кардио тренировок, программа тяжелая, проверяет выносливость. Это просто великолепная программа! Она мне очень помогла избавиться именно от жира на животе! Тренировки просто сумасшедшие, как в переводе — это просто безумие! Всем рекомендую, тренировки из чисто кардио тренировок, программа тяжелая, проверяет выносливость, но оно того стоит! программа разделена на 2 месяца, и одной восстановительной недели между месяцами — это просто безумие! Всем рекомендую, тренировки из чисто кардио тренировок, программа тяжелая, проверяет выносливость
+
+							.share-buttons
+								.text Расскажи друзьям!
+								.twitter-btn
+									img(src="img/reviews/twitter_btn.png", alt="")
+								.fb-btn
+									img(src="img/reviews/fb_btn.png", alt="")
+								.google-btn
+									img(src="img/reviews/google_btn.png", alt="")
+
+				.clearfix
+
+
+			include parts/footer.pug

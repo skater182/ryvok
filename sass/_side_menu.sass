@@ -1,0 +1,239 @@
+.side-menu
+	.side-menu-inner
+		padding-top: 50px
+		padding-bottom: 60px
+		height: 100%
+		background: $side-menu-background;
+		padding-right: 40px
+		padding-left: 30px
+	&.main
+		.side-menu-inner
+			padding-right: 15px
+			width: 145px
+			padding-right: 20px
+			&::before
+				content: ''
+				position: absolute
+				background: #242321
+				right: 1px
+				top: -20px
+				width: 20px
+				height: 255px
+				transform: skewY(-45deg)
+			&::after
+				content: ''
+				position: absolute
+				background: #242321
+				background-size: cover
+				right: 1px
+				width: 20px
+				bottom: -20px
+				height: calc(100% - 225px)
+				transform: skewY(45deg)
+	box-sizing: border-box
+	width: 165px
+	height: 100vh
+	position: fixed
+	z-index: 110
+	float: left
+	padding-right: 0
+	text-align: center
+	.page-items
+		margin-top: 125px
+		.item
+			margin-bottom: 90px
+			transition: .25s
+			svg
+				width: 100%
+			.svg-teens-elem
+				transition: .2s
+			.svg-blog-bg
+				stroke-dashoffset: 1000
+				stroke-dasharray: 1000
+				stroke: transparent
+				animation: dash-back .5s linear forwards
+			&.blog.loaded
+				.svg-blog-bg
+					stroke: #36A9E1
+			&.blog.active
+				.svg-blog-bg
+					stroke-dashoffset: 0
+					stroke-dasharray: 0
+					stroke: #36A9E1
+			&.ryvok
+				&:not(.active)
+					#ryvokPath
+						stroke: #fff
+				#clip path
+					overflow: hidden
+				svg
+					stroke-width: 17
+					transition:transform .5s ease-out
+				#ryvokPath
+					stroke-dasharray: 2400
+					stroke-dashoffset: 0
+					stroke-width: 15
+					-webkit-clip-path: url(#clip)
+					clip-path: url(#clip)
+					fill: none
+				&:hover
+					#ryvokPath
+						stroke-dashoffset: 2400
+						stroke-width: 10
+						animation: ryvok 5.2s linear forwards
+						stroke: #ff4800
+			&.beat
+				svg
+					overflow: visible
+				.st0
+					transition: .25s
+				&.active
+					.st0
+						fill: #d51215
+			&.beat:hover
+				.st0
+					fill: #d51215
+					transition: .25s
+				#first .st0
+					animation: beat .2s alternate 2
+
+
+				#second .st0
+					animation: beat .2s .1s alternate 2
+
+
+				#third .st0
+					animation: beat .2s .2s alternate 2
+
+
+				#fourth .st0
+					animation: beat .2s .3s alternate 2
+
+
+				#fifth .st0
+					animation: beat .2s .4s alternate 2
+
+
+				#sixth .st0
+					animation: beat .2s .5s alternate 2
+
+
+				#seventh .st0
+					animation: beat .2s .6s alternate 2
+
+
+				#eighth .st0
+					animation: beat .2s .7s alternate 2
+
+
+				#ninth .st0
+					animation: beat .2s .8s alternate 2
+
+
+				#tenth .st0
+					animation: beat .2s .9s alternate 2
+
+
+				#eleventh .st0
+					animation: beat .2s 1s alternate 2
+
+
+				#twelves .st0
+					animation: beat .2s 1.1s alternate 2
+
+
+
+				#thirteenth .st0
+					animation: beat .2s 1.2s alternate 2
+
+
+
+				#fourteenth .st0
+					animation: beat .2s 1.3s alternate 2
+
+
+
+				#fifteenth .st0
+					animation: beat .2s 1.4s alternate 2
+
+
+
+				#sixteenth .st0
+					animation: beat .2s 1.5s alternate 2
+
+
+
+				#seventeenth .st0
+					animation: beat .2s 1.6s alternate 2
+
+
+				#eighteenth .st0
+					animation: beat .2s 1.6s alternate 2
+
+			&:hover
+				.svg-teens-elem
+					transition: .2s
+				.svg-blog-bg
+					animation: dash .5s linear forwards
+
+			&.teens
+				&.active
+					path
+						fill: #FFCD00
+				path
+					fill: #fff
+				&:hover
+					path
+						transform-origin: 50% 50%
+						transition: .25s
+						fill: #FFCD00
+					#XMLID_28_
+						transform: translate(0,-3px)
+					#XMLID_29_
+						transform: translate(2px,1px)
+					#XMLID_30_
+						transform: translate(-2px,1px)
+					#XMLID_31_
+						transform: translate(0,2px)
+					#XMLID_32_
+						transform: translate(-2px,0) rotate(-5deg)
+					#XMLID_33_
+						transform: translate(0,-2px)
+					#XMLID_34_
+						transform: translate(0,-2px) rotate(-10deg)
+					#XMLID_35_
+						transform: translate(0,-2px) rotate(-10deg)
+					#XMLID_36_
+						transform: rotate(-10deg)
+					#XMLID_37_
+						transform: translate(-1px,0)
+					#XMLID_38_
+						transform: translate(0,1px) rotate(10deg)
+					#XMLID_39_
+						transform: translate(3px,-2px)
+					#XMLID_40_
+						transform: translate(0,-3px) rotate(50deg)
+					#XMLID_41_
+						transform: translate(0,1px) rotate(-5deg)
+					#XMLID_42_
+						transform: translate(0,1px) rotate(-10deg)
+					#XMLID_43_
+						transform: translate(1px,0)
+					#XMLID_44_
+						transform: translate(1px,0)
+					#XMLID_45_
+						transform: translate(1px,-3px)
+					#XMLID_46_
+						transform: translate(1px,0) rotate(-5deg)
+					#XMLID_47_
+						transform: translate(1px,-2px)
+					#XMLID_48_
+						transform: translate(1px,0) rotate(5deg)
+					#XMLID_49_
+						transform: translate(1px,-2px) rotate(-10deg)
+					#XMLID_50_
+						transform: translate(1px,0) rotate(5deg)
+	&::before
+		position: absolute
+		content: ''
+

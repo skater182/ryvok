@@ -1,0 +1,109 @@
+footer
+	height: 220px
+	background: url('../img/footer-bg.jpg') no-repeat
+	background-size: cover
+	padding-top: 50px
+	padding-bottom: 62px
+	overflow: hidden
+	padding-left: 65px
+	padding-right: 25px
+	z-index: 10
+	.footer-block
+		width: 33.3%
+		float: left;
+		color: #fff
+		font-style: italic
+		line-height: 16px
+		font-size: 13px
+		a
+			color: $footer-link-color
+			line-height: 16px
+		&.about-site
+			padding-top: 40px
+		&.soc-icons
+			&.tab-visible
+				.item
+					a
+						height: 45px
+						width: 45px
+			text-align: center
+			.text
+				margin-bottom: 20px
+			.items
+				margin: 0 -10px
+			.item
+				display: inline-block
+				margin: 0 10px
+				a
+					display: block
+					width: 55px
+					height: 55px
+					transition: .25s
+					.st0
+						fill: #e73b23
+					&:hover
+						transform: scale(1.1)
+						transition: .25s
+		&.dev-info
+			text-align: right
+			padding-top: 40px
+			vertical-align: top
+			float: right
+			.text-wrapper
+				text-align: left
+				display: inline-block
+				.text
+					position: relative
+					&::after
+						position: absolute
+						content: ''
+						width: 36px
+						height: 26px
+						background: url('../img/svg/em-logo.svg') no-repeat
+						right: calc(100% + 10px)
+						top: 4px
+
+	.copyright-block
+		width: 100%
+		text-align: center
+		float: left
+		margin-top: 35px
+		font-size: 11px
+		margin-bottom: 35px
+		color: #fff
+		a
+			color: $footer-link-color
+
+@media (max-width: 991px)
+	footer
+		height: 250px
+		padding-left: 25px
+		padding-top: 30px
+		.footer-block
+			width: 50%
+			&.soc-icons.tab-visible
+				width: 100%
+		.footer-block.dev-info, 
+		.footer-block.about-site
+			padding-top: 20px
+		.footer-block.soc-icons .text
+			margin-bottom: 10px
+
+@media (max-width: 767px)
+	footer
+		padding: 15px 25px
+		padding-top: 30px
+		.footer-block
+			font-size: 14px
+			width: 100%
+			line-height: 17px
+			&.soc-icons.tab-visible
+				.item
+					margin: 0 5px
+					a
+						height: 27px
+						width: 27px
+			&.dev-info
+				text-align: left
+				padding-left: 40px
+				padding-top: 15px

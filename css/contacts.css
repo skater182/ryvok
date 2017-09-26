@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'OswaldDemi';
+  src: url("../fonts/OswaldMediumItalic.eot");
+  src: url("../fonts/OswaldMediumItalic.eot") format("embedded-opentype"), url("../fonts/OswaldMediumItalic.woff2") format("woff2"), url("../fonts/OswaldMediumItalic.woff") format("woff"), url("../fonts/OswaldMediumItalic.ttf") format("truetype"), url("../fonts/OswaldMediumItalic.svg#OswaldMediumItalic") format("svg"); }
+
+@font-face {
+  font-family: 'OswaldHeavy';
+  src: url("../fonts/oswaldheavy5913296fd53b1.eot");
+  src: url("../fonts/oswaldheavy5913296fd53b1.eot") format("embedded-opentype"), url("../fonts/oswaldheavy5913296fd53b1.woff2") format("woff2"), url("../fonts/oswaldheavy5913296fd53b1.woff") format("woff"), url("../fonts/oswaldheavy5913296fd53b1.ttf") format("truetype"), url("../fonts/oswaldheavy5913296fd53b1.svg#oswaldheavy5913296fd53b1") format("svg"); }
+
+.map-wrapper {
+  position: relative; }
+  .map-wrapper.hidden {
+    opacity: 0;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s; }
+
+#map {
+  height: 540px; }
+
+.map-block {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: #302f2c;
+  z-index: 100;
+  padding: 50px 40px;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px; }
+  .map-block p {
+    margin: 0;
+    margin-bottom: 10px; }
+  .map-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: url("../img/map-logo.png") no-repeat center center;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+    opacity: .1; }
+
+.content-block {
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-right: 0; }
+
+.select-block, .place-logo, .place-address {
+  padding-left: 60px;
+  padding-right: 90px; }
+
+.submit-block {
+  text-align: center; }
+
+.submit-btn {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer; }
+  .submit-btn .text {
+    font-size: 11px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    position: relative;
+    z-index: 1; }
+  .submit-btn .default-bg {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s; }
+    .submit-btn .default-bg svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0; }
+    .submit-btn .default-bg .bd {
+      stroke: #fff; }
+  .submit-btn .hover-bg {
+    opacity: 0;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s; }
+    .submit-btn .hover-bg svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 100%; }
+    .submit-btn .hover-bg .bd-fill {
+      fill: #fff; }
+  .submit-btn:hover .default-bg {
+    opacity: 0;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s; }
+  .submit-btn:hover .hover-bg {
+    opacity: 1;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s; }
+  .submit-btn:hover .text {
+    color: #e73b23; }
+
+@media (max-width: 767px) {
+  .select-block, .place-logo, .place-address {
+    padding: 0; }
+  .place-logo {
+    display: block; }
+  .place-address {
+    display: block; }
+    .place-address p {
+      display: none; }
+  #map {
+    height: 350px; } }
+
+@media (max-width: 767px) and (orientation: landscape) {
+  #map {
+    height: 300px; } }

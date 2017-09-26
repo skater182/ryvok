@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Рывок
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/schedule.css")
+		link(rel="stylesheet", href="css/contacts.css")
+		link(rel="stylesheet", href="css/responsive.css")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnTMrJ-8wzzDvHB-LMmiS8EyQpoBJoo0")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_inner.pug
+
+		.main-wrapper.inner
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+
+			.page-title-bg
+				img(src="img/schedule/title-bg.jpg", alt="")
+			.inner-page-title
+				.page-title КОНТАКТЫ
+					.title-logo
+						include ../img/svg/menu-ryvok.svg
+
+			.content-block
+				.select-block
+					.city-select
+						.selected-item Выберите город
+						.items-wrapper
+							.items
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+								.select-item Киев
+								.select-item Луцк
+								.select-item Нью-Йорк
+								.select-item Антананариву
+
+					.place-select.not-active
+						.selected-item Выберите локацию
+						.items-wrapper
+							.items
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+								.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+				.place-logo.not-active
+					img(src="img/schedule/logo.png", alt="")
+				.place-address.not-active 
+					p  (044) 223-22-12   //   go@ryvok.com.ua
+					p Киев, м. Петровка, ул. Куреневская, 18
+					p Работаем с 6:30 до 22:00 по будним дням,#[br]с 9:00 до 14:00 в субботу
+					p В воскресенье — отдых :-)
+					.submit-block
+						.submit-btn 
+							.text Отправить запрос
+							.default-bg 
+								include ../img/svg/dokinul-knopka-pff-default.svg
+							.hover-bg
+								include ../img/svg/dokinul-knopka-pff.svg
+				.map-wrapper.hidden
+					#map.hidden
+					//- .map-block
+					//- 	.text 
+					//- 		p  (044) 223-22-12   //   go@ryvok.com.ua
+					//- 		p Киев, м. Петровка, ул. Куреневская, 18
+					//- 		p Работаем с 6:30 до 22:00 по будним дням,#[br]с 9:00 до 14:00 в субботу
+					//- 		p В воскресенье — отдых :-)
+
+			include parts/footer.pug

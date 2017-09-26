@@ -1,0 +1,196 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons";
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+.content-block
+	padding-top: 60px
+	padding-bottom: 100px
+	background: url('../img/ryvok-fon.jpg') no-repeat center center
+	background-size: cover
+	padding-left: 60px
+	padding-right: 90px
+
+.place-logo
+	text-align: center
+	margin-bottom: 10px
+	transition: .4s
+	&.not-active
+		transition: .4s
+		opacity: 0
+
+.place-address
+	text-align: center
+	color: #fff
+	font-weight: bold
+	font-size: 17px
+	line-height: 25px
+	transition: .4s .4s
+	&.not-active
+		transition: .4s .4s
+		opacity: 0
+
+.schedule-table
+	transition: .4s .8s
+	&.not-active
+		transition: .4s .8s
+		opacity: 0
+	.schedule-table-row
+		display: flex
+		width: 100%
+		align-items: center
+
+		.schedule-table-col
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			width: calc(100% / 8)
+			margin: 2px
+			font-weight: bold
+			font-style: italic
+			font-size: 14px
+			text-align: center
+			height: 70px
+			&:nth-child(odd)
+				background: #555454
+			&:nth-child(even)
+				background: #3e3d3d
+			&:first-child
+				background: none
+				color: $main-site-color
+				font-weight: bold
+				font-size: 14px
+				text-transform: uppercase
+				font-style: normal
+				justify-content: flex-end
+				padding-right: 22px
+			&:last-child
+				background: rgba(34,34,34,.3) url('../img/schedule/empty-cell.png') no-repeat center center
+
+		&:first-child
+			.schedule-table-col
+				background: none
+				color: $main-site-color
+				font-weight: bold
+				font-size: 14px
+				text-transform: uppercase
+				font-style: normal
+				align-items: flex-end
+				padding-bottom: 20px
+
+.mobile-tabs
+	.day-select
+		display: flex
+		width: 100%
+		justify-content: center
+		margin-bottom: 20px
+		.item
+			flex: 1
+			color: $main-site-color
+			text-transform: uppercase
+			font-weight: bold
+			font-family: "Ubuntu",sans-serif
+			&:last-child
+				flex: 0
+			span
+				border-bottom: 3px solid transparent
+			&.active
+				color: #fff
+				span
+					display: inline-block
+					padding: 0 2px
+					border-bottom: 3px solid $main-site-color
+	.day-schedule
+		display: none
+		&.active
+			display: block
+		.schedule-tabs-row
+			width: 100%
+			margin-bottom: 2px
+			background: rgba(77,74,73,.8)
+			color: #fff
+			overflow: hidden
+			.schedule-time
+				float: left
+				padding: 15px 0
+				padding-left: 15px
+				font-size: 12px
+				line-height: 1
+			.schedule-programms
+				float: right
+				font-style: italic
+				width: 150px
+				padding: 15px 0
+				line-height: 1
+				font-size: 12px
+
+@import "all_responsive";
+
+@media (max-width: 1024px)
+	.content-block
+		padding: 0 15px
+		padding-bottom: 80px
+		padding-top: 40px
+	.schedule-table 
+		.schedule-table-row 
+			.schedule-table-col
+				&:first-child
+					flex: 0
+			&:first-child
+				.schedule-table-col:first-child
+					flex: 1
+			.schedule-table-col
+				height: 50px
+				font-size: 12px
+	.inner-page-title .page-title
+		font-size: 60px
+
+@media(min-width: 768px)
+	.mobile-tabs
+		display: none
+
+@media (max-width: 767px)
+	.desktop-table
+		display: none
+	.select-block 
+		.place-select
+			margin-left: 0
+			.selected-item
+				padding: 12px 0
+				padding-left: 20px
+				padding-right: 50px
+				width: 230px
+		.city-select
+			margin-right: 0
+			margin-bottom: 12px
+			.selected-item
+				padding: 12px 0
+				padding-left: 20px
+				padding-right: 50px
+				width: 230px
+	.inner-page-title
+		height: 215px
+		.page-title
+			font-size: 32px
+			height: 215px
+	.place-logo,.place-address
+		display: none
+	.select-block
+		margin-bottom: 35px
+
+
+@media (max-width: 767px) and (orientation: landscape)
+	.select-block .city-select, .select-block .place-select
+		display: block
+		.selected-item
+			margin: 0 auto
+	.content-block
+		padding: 0 30px
+		padding-bottom: 75px
+		padding-top: 25px

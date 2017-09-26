@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Teens
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/teens.css")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+		script(src="js/teens.js")
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							.active
+								include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «teens»
+					li
+						a(href="#facts") 8 фактов о «teens»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#board") свежие новости
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_teens.pug
+
+		.main-wrapper
+			.ask #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson
+				div Записаться #[span.desktop-part на занятие]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+			.first-screen.screen
+				.bottom-button
+				.main-menu
+					ul
+						li
+							a(href="#whatIsThat") что такое «teens»
+						li
+							a(href="#facts") 8 фактов о «teens»
+						li
+							a(href="#results") результаты и отзывы
+						li
+							a(href="#abonements") абонементы
+						li
+							a(href="#answers") вопрос-ответ
+						li
+							a(href="#board") свежие новости
+				.center-block
+					.logo 
+						include ../img/svg/teens-ryvok.svg
+					.text
+						include ../img/svg/teens-first-logo.svg
+
+				.teens-left-carousel
+					.owl-carousel
+						.item.first
+							img(class="slide-background" src="img/teens/first-left.jpg", alt="")
+							img(class="slide-guy" src="img/teens/first-left-guy.png", alt="")
+						.item.second
+							img(class="slide-background" src="img/teens/second-left.jpg", alt="")
+							.footballer
+								img(class="slide-guy" src="img/teens/second-left-guy.png", alt="")
+								img(class="slide-ball" src="img/teens/second-left-ball.png", alt="")
+						.item.third
+							img(class="slide-background" src="img/teens/third-left.jpg", alt="")
+							.hokkeist
+								img.slide-guy(src="img/teens/third-left-first-guy.png", alt="")
+								img.slide-shaiba(src="img/teens/third-left-shaiba.png", alt="")
+							img.slide-second-guy(src="img/teens/third-left-second-guy.png", alt="")
+						.item.fourth
+							img(class="slide-background" src="img/teens/fourth-left.jpg", alt="")
+							img.slide-guy(src="img/teens/fourth-left-guy.png", alt="")
+							img.slide-shadow(src="img/teens/fourth-left-shadow.png", alt="")
+						.item.fifth
+							img(class="slide-background" src="img/teens/fifth-left.jpg", alt="")
+						.item.sixth
+							img(class="slide-background" src="img/teens/sixth-left.jpg", alt="")
+							img.slide-guy(src="img/teens/sixth-left-guy.png", alt="")
+				.teens-right-carousel
+					.owl-carousel
+						.item.first
+							img(class="slide-background" src="img/teens/first-right.jpg", alt="")
+							img(class="slide-guy" src="img/teens/first-right-guy.png", alt="")
+						.item.second
+							img(class="slide-background" src="img/teens/second-right.jpg", alt="")
+							.diver
+								img(class="slide-guy" src="img/teens/second-right-guy.png", alt="")
+								img(class="slide-bubbles" src="img/teens/second-right-bubbles.png", alt="")
+						.item.third
+							img(class="slide-background" src="img/teens/third-right.jpg", alt="")
+							img(class="slide-front-bg" src="img/teens/third-front-bg.png", alt="")
+							img(class="slide-guy" src="img/teens/third-right-guy.png", alt="")
+						.item.fourth
+							img(class="slide-background" src="img/teens/fourth-right.jpg", alt="")
+							img(class="slide-guy" src="img/teens/fourth-right-guy.png", alt="")
+						.item.fifth
+							img(class="slide-background" src="img/teens/fifth-right.jpg", alt="")
+							img.slide-guy(src="img/teens/fifth-right-guy.png", alt="")
+						.item.sixth
+							img(class="slide-background" src="img/teens/sixth-right.jpg", alt="")
+
+			.second-screen.screen#whatIsThat
+				.bottom-button
+				//- div.text_div
+				//- 	img(id="light" src="img/beat/spotlight.png")
+				//- 	div.text_p
+				//- 		img(src="img/beat/second-screen-logo.png", alt="")
+				.flashlight
+				.front-block
+					.beat-logo
+						.bottom-svg
+							include ../img/svg/logo-teens-isxodnaya.svg
+					.center-block Специально разработанная #[br] фитнес-программа #[span.yellow по общей#[br]  физической подготовке] детей и#[br]  подростков
+					.second-bottom
+						.watch-video-btn
+							.text Смотреть видео
+							.bg 
+								include ../img/svg/dokinul-knopka-pff-default.svg
+							.hover-bg
+								include ../img/svg/dokinul-knopka-pff.svg
+						a.partner-link(href="http://www.morshinska.ua/" target="_blank")
+							img(src="img/gen-menu-partner.png", alt="")
+			.third-screen.screen#facts
+				.bottom-button
+				.cool-slider
+					.owl-carousel
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text Развить в ребенке самостоятельную целеустремленность, навык преодоления себя. Дать ему окружение целеустремленных детей. Развить командный дух.  Приучить его контролировать свое тело. Обрести понимание важности здорового питания.
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text #[span.orange Контроль техники выполнения упражнений,] что максимально предоствращает травмы
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text Высокоинтенсивные кардиотренировки на которых прорабатываются #[span.orange абсолютно все] группы мышц 
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text Отсутствие тренажеров и гантелей, работа #[span.orange только со своим телом]
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text Проверенное фитнес-решение #[span.orange как для мужчин, так и для женщин]
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text Правильный комплексный подход к питанию #[span.orange без диет и голодовок,] а главное — вкусный :-)
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									include ../img/svg/teens-ryvok.svg
+								.text #[span.orange Мотивационный пакет] для поддержки высокого морального духа и контроля результатов
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+						.item
+							.text-block
+								.logo
+									img(src="img/white-logo.png", alt="")
+								.text Окружение энергичных людей, которые #[span.orange вдохновляют и заряжают] на достижения
+							.photo-bg
+								img(src="img/teens/first-slide.jpg", alt="")
+			.fourth-screen.screen#results
+				.bottom-button
+				.title-wrapper
+					.screen-title Результаты и отзывы
+				.result-slider
+					.owl-carousel
+						.item
+							.top-block
+								.before-photo
+									img(src="img/slider-before.jpg", alt="")
+								.after-photo
+									img(src="img/slider-after.jpg", alt="")
+								.contacts
+									.name-age Рианна Иванова,#[br] 24 года
+									.soc-icons
+										a(href="#")
+											include ../img/svg/menu-soc-insta.svg
+										a(href="#")
+											include ../img/svg/menu-soc-fb.svg
+							.review-text.desktop Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе: «Просто делай как надо, а пончики сожрешь после!» #[a(href="#") читать весь отзыв]
+							.review-text.mobile Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе #[a(href="#") читать весь отзыв]
+						.item
+							.top-block
+								.before-photo
+									img(src="img/slider-before.jpg", alt="")
+								.after-photo
+									img(src="img/slider-after.jpg", alt="")
+								.contacts
+									.name-age Рианна Иванова,#[br] 24 года
+									.soc-icons
+										a(href="#")
+											include ../img/svg/menu-soc-insta.svg
+										a(href="#")
+											include ../img/svg/menu-soc-fb.svg
+							.review-text.desktop Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе: «Просто делай как надо, а пончики сожрешь после!» #[a(href="#") читать весь отзыв]
+							.review-text.mobile Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе #[a(href="#") читать весь отзыв]
+
+						.item
+							.top-block
+								.before-photo
+									img(src="img/slider-before.jpg", alt="")
+								.after-photo
+									img(src="img/slider-after.jpg", alt="")
+								.contacts
+									.name-age Рианна Иванова,#[br] 24 года
+									.soc-icons
+										a(href="#")
+											include ../img/svg/menu-soc-insta.svg
+										a(href="#")
+											include ../img/svg/menu-soc-fb.svg
+							.review-text.desktop Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе: «Просто делай как надо, а пончики сожрешь после!» #[a(href="#") читать весь отзыв]
+							.review-text.mobile Когда впервые я оказалась в зале, один на один со своим страхом быть поверженной первой же нагрузкой, я сказала себе #[a(href="#") читать весь отзыв]
+
+			.fifth-screen.screen#abonements
+				.title-wrapper
+					.screen-title Абонементы и привелегии
+					.bottom-button
+					.abonements.slider
+						.owl-carousel
+							.item.first
+								.content
+									a.title(href="full_forward.html") "Полный вперед!"
+									.photo
+										img(src="img/abon1.png", alt="")
+									.desc Получи полный курс тренировок, результат которых уже изменил более 6 000 жизней!
+									a.details-link(href="full_forward.html" target="_blank") #[span Подробнее]
+										include ../img/svg/dokinul-knopka-podrobnee-default.svg
+							.item.second
+								.content
+									a.title(href="#") "Shape"
+									.photo
+										img(src="img/abon2.png", alt="")
+									.desc Поддерживай своё тело в тонусе, а настроения — на высоте!
+									a.details-link(href="#" target="_blank") #[span Подробнее] 
+										include ../img/svg/dokinul-knopka-podrobnee-default.svg
+							.item.third
+								.content
+									a.title(href="9-15.html") "9-15"
+									.photo
+										img(src="img/abon3.png", alt="")
+									.desc Уникальный курс общей физической подготовки для детей в стиле Рывка!
+									a.details-link(href="9-15.html" target="_blank") #[span Подробнее]
+										include ../img/svg/dokinul-knopka-podrobnee-default.svg
+							.item.fourth
+								.content
+									a.title(href="lifestyle.html") "Lifestyle"
+									.photo
+										img(src="img/abon4.png", alt="")
+									.desc Прошел Рывок? — Получи эксклюзивный  VIP-пакет привилегий и скидок!
+									a.details-link(href="lifestyle.html" target="_blank") #[span Подробнее]
+										include ../img/svg/dokinul-knopka-podrobnee-default.svg	
+					.abonements
+						.item.first
+							.content
+								a.title(href="full_forward.html") "Полный вперед!"
+								.photo
+									img(src="img/abon1.png", alt="")
+								.desc Получи полный курс тренировок, результат которых уже изменил более 6 000 жизней!
+								a.details-link(href="full_forward.html" target="_blank") #[span Подробнее]
+									include ../img/svg/dokinul-knopka-podrobnee-default.svg
+						.item.second
+							.content
+								a.title(href="#") "Shape"
+								.photo
+									img(src="img/abon2.png", alt="")
+								.desc Поддерживай своё тело в тонусе, а настроения — на высоте!
+								a.details-link(href="#" target="_blank") #[span Подробнее] 
+									include ../img/svg/dokinul-knopka-podrobnee-default.svg
+						.item.third
+							.content
+								a.title(href="9-15.html") "9-15"
+								.photo
+									img(src="img/abon3.png", alt="")
+								.desc Уникальный курс общей физической подготовки для детей в стиле Рывка!
+								a.details-link(href="9-15.html" target="_blank") #[span Подробнее]
+									include ../img/svg/dokinul-knopka-podrobnee-default.svg
+						.item.fourth
+							.content
+								a.title(href="lifestyle.html") "Lifestyle"
+								.photo
+									img(src="img/abon4.png", alt="")
+								.desc Прошел Рывок? — Получи эксклюзивный  VIP-пакет привилегий и скидок!
+								a.details-link(href="lifestyle.html" target="_blank") #[span Подробнее]
+									include ../img/svg/dokinul-knopka-podrobnee-default.svg				
+
+			.sixth-screen.screen#answers
+				.bottom-button
+				.title-wrapper
+					.screen-title Вопрос-Ответ
+
+				.answers
+					.item
+						.q-wrapper
+							.question «Мне 39 лет. Смогу ли я позволить себе хавать плюшки и при этом не толстеть?»
+						.a-wrapper
+							//- canvas(id="aCanvas1")
+							.answer
+								.answer-text Повыше держите попу, купите мороженое и перед сном обязательно примите теплый душ. Утром съешьте три яйца натощак. Вот такой простой рецепт! Но если вам не нравится прыгать и бегать, то просто сидите сиднем, поглощая фастуфудину- чипсятину с колой и варениками. Никто вас не осудит. Например, мой фронтовой товарищ всегда питался только винтовками, и его все равно любили.
+								a.full-answer-link(href="#") Читать весь ответ 
+					.item
+						.q-wrapper
+							//- canvas(id="qCanvas1")
+							.question «Я никак не могу подобрать стильные трусы для занятия вашей аэробикой. Может, фитнес не для меня?»
+						.a-wrapper
+							//- canvas(id="aCanvas1")
+							.answer 
+								.answer-text Ну да, ну да. Вы бы еще сослались на недолет семи пассажирских лайнеров до острова Чикипумпума на Занзибаре! Ладно, вот совет: не грозите южному централу, попивая сок у себя на квартале.
+								a.full-answer-link(href="#") Читать весь ответ 
+					.item
+						.q-wrapper
+							//- canvas(id="qCanvas1")
+							.question «Я никак не могу подобрать стильные трусы для занятия вашей аэробикой. Может, фитнес не для меня?»
+						.a-wrapper
+							//- canvas(id="aCanvas1")
+							.answer 
+								.answer-text Ну да, ну да. Вы бы еще сослались на недолет семи пассажирских лайнеров до острова Чикипумпума на Занзибаре! Ладно, вот совет: не грозите южному централу, попивая сок у себя на квартале.
+								a.full-answer-link(href="#") Читать весь ответ 
+
+			.seventh-screen.screen#board
+				.board
+					.item
+						.photo
+							img(src="img/promo-img1.jpg", alt="")
+						.text 
+							a(href="#") Ведущий тренер «Рывка» рекомендует грызть морковку!
+							.tags
+								.tag /блог
+					.item.big
+						.photo
+							img(src="img/promo-img2.jpg", alt="")
+						.text 
+							a(href="#") Большое интервью с первой бит-тренировки
+							.tags
+								.tag /блог
+					.item.review-block
+						a(href="#")
+							.photo
+								img(src="img/promo-img3.jpg", alt="")
+							.text-block
+								.quotes
+									img(src="img/quotes_black.png", alt="")
+								.review-text мной заслужены особые привилегии «рывка» – это вдохновляет!
+								.lifestyle-img
+									img(src="img/lifestyle-img.png", alt="")
+								span.link фитнес-карта #[br] исключительных #[br] привилегий
+					.item
+						.photo
+							img(src="img/promo-img4.jpg", alt="")
+						.text 
+							a(href="#") «Рывок-кросс» открывает сезон дерзких уличных занятий
+							.tags
+								.tag /кросс
+					.item.promo-block
+						a(href="#")
+							.photo
+								img(src="img/promo-img5.jpg", alt="")
+							.text-block
+								.beat-img
+									include ../img/svg/menu-beat.svg
+								.promo-text а хочешь посещать «рывок-бит» со скидкой 50%?
+								.link #[span.link-text Пф, конечно хочу!]
+									include ../img/svg/dokinul-knopka-pff-default.svg
+					.item.big
+						.photo
+							img(src="img/promo-img6.jpg", alt="")
+						.text 
+							a(href="#") «Рывок-бит» снова покорил НСК «Олимпийский»!
+							.tags
+								.tag /блог
+								.tag /beat
+				.board.slider
+					.owl-carousel
+						.item
+							.photo
+								img(src="img/promo-img1.jpg", alt="")
+							.text 
+								a(href="#") Ведущий тренер «Рывка» рекомендует грызть морковку!
+								.tags
+									.tag /блог
+						.item.big
+							.photo
+								img(src="img/promo-img2.jpg", alt="")
+							.text 
+								a(href="#") Большое интервью с первой бит-тренировки
+								.tags
+									.tag /блог
+						.item.review-block
+							a(href="#")
+								.photo
+									img(src="img/promo-img3.jpg", alt="")
+								.text-block
+									.quotes
+										img(src="img/quotes_black.png", alt="")
+									.review-text мной заслужены особые привилегии «рывка» – это вдохновляет!
+									.lifestyle-img
+										img(src="img/lifestyle-img.png", alt="")
+									span.link фитнес-карта #[br] исключительных #[br] привилегий
+						.item
+							.photo
+								img(src="img/promo-img4.jpg", alt="")
+							.text 
+								a(href="#") «Рывок-кросс» открывает сезон дерзких уличных занятий
+								.tags
+									.tag /кросс
+						.item.promo-block
+							a(href="#")
+								.photo
+									img(src="img/promo-img5.jpg", alt="")
+								.text-block
+									.beat-img
+										include ../img/svg/menu-beat.svg
+									.promo-text а хочешь посещать «рывок-бит» со скидкой 50%?
+									.link #[span.link-text Пф, конечно хочу!]
+										include ../img/svg/dokinul-knopka-pff-default.svg
+						.item.big
+							.photo
+								img(src="img/promo-img6.jpg", alt="")
+							.text 
+								a(href="#") «Рывок-бит» снова покорил НСК «Олимпийский»!
+								.tags
+									.tag /блог
+									.tag /beat
+			.video-popup-teaser
+				.close-button
+				video(width="100%" height="100%")
+					source(src="video/teaser.mp4" type="video/mp4")
+			include parts/footer.pug

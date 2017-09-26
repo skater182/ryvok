@@ -1,0 +1,155 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons";
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+
+.content-block
+	padding: 130px 80px
+	background: #fff
+
+.qa-items
+	.item
+		margin-bottom: 75px
+		overflow: hidden
+		.answer,.question
+			width: 50%
+			float: left
+			position: relative
+
+		.question
+			font-size: 20px
+			font-weight: 300
+			font-style: italic
+			padding: 0 50px
+			line-height: 24px
+			letter-spacing: .5px
+			&::after
+				position: absolute
+				content: ""
+				width: 16px
+				height: 29px
+				background: url('../img/question-sign-o.png') no-repeat
+				background-size: 100% 100%
+				top: 0
+				left: 0
+
+		.answer
+			font-size: 17px
+			letter-spacing: 1px
+			padding-left: 55px
+			padding-right: 35px
+			line-height: 25px
+			&::after
+				position: absolute
+				content: ""
+				width: 16px
+				height: 29px
+				background: url('../img/answer-sign.png') no-repeat
+				background-size: 100% 100%
+				top: 0
+				left: 0
+			.answer-text
+				max-height: 125px
+				overflow: hidden
+				margin-bottom: 20px
+				transition: cubic-bezier(0, 1, 0, 1) 3s
+				position: relative
+				&::after
+					position: absolute
+					content: ""
+					top: 0
+					bottom: 0
+					width: 100%
+					left: 0
+					transition: .4s
+					background: rgba(255,255,255,0);
+					background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 39%, rgba(255,255,255,0.39) 58%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.97) 100%);
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(39%, rgba(255,255,255,0)), color-stop(58%, rgba(255,255,255,0.39)), color-stop(86%, rgba(255,255,255,0.97)), color-stop(100%, rgba(255,255,255,0.97)));
+					background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 39%, rgba(255,255,255,0.39) 58%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.97) 100%);
+					background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 39%, rgba(255,255,255,0.39) 58%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.97) 100%);
+					background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 39%, rgba(255,255,255,0.39) 58%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.97) 100%);
+					background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 39%, rgba(255,255,255,0.39) 58%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.97) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+				&.sm::after
+					content: none
+			&.opened
+				.answer-text
+					max-height: 1000px
+					transition: 2s
+					&::after
+						opacity: 0
+						transition: .4s
+				.switch-answer
+					&::after
+						transform: rotate(180deg)
+						transition: .4s
+			.switch-answer
+				display: inline-block
+				font-size: 11px
+				text-transform: uppercase
+				color: #e73a24
+				border-bottom: 1px dotted #e73a24
+				margin-left: 40px
+				position: relative
+				z-index: 1
+				margin-bottom: 10px
+				line-height: 1
+				&::after
+					position: absolute
+					content: ""
+					background: url('../img/svg/ico-otzyv-garmoshka.svg') no-repeat
+					background-size: 100% 100%
+					width: 28px
+					height: 28px
+					right: calc(100% + 12px)
+					transition: .4s
+					top: -8px
+				&::before
+					position: absolute
+					content: ""
+
+				&:hover 
+					cursor: pointer
+
+
+@import "all_responsive";
+
+@media (max-width: 1024px)
+	.content-block
+		padding: 55px 25px
+		padding-bottom: 50px
+	.qa-items
+		.item
+			margin-bottom: 50px
+			.question
+				font-size: 16px
+				padding: 0 30px
+				line-height: 20px
+			.answer
+				font-size: 16px
+				padding-right: 0
+				padding-left: 30px
+				line-height: 18px
+
+@media (max-width: 767px)
+	.qa-items
+		.item
+			margin-bottom: 30px
+			padding-bottom: 20px
+			border-bottom: 1px solid #e8e8e8
+			&:last-child
+				border: 0
+				margin-bottom: 0
+				padding-bottom: 0
+			.answer,.question
+				width: 100%
+			.question
+				margin-bottom: 25px
+				letter-spacing: 0
+				padding-right: 0

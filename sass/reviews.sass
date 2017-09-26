@@ -1,0 +1,367 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons"
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+.screen
+	height: 100vh
+
+.before_after
+	width: 42%
+	height: 100%
+	overflow: hidden
+	float: left
+	position: relative
+	img
+		min-width: 100%
+		min-height: 100%
+
+	.center_block_line
+		width: 5px
+		background: #e6372d
+		height: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 10
+		pointer-events: none
+
+	.before_photo
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		left: 0
+		pointer-events: none
+		img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+
+		&::before
+			position: absolute
+			content: "ДО"
+			background: url('../img/reviews/before_after_bg.png') no-repeat
+			background-size: 100% 100%
+			display: inline-block
+			top: 0
+			left: 45px
+			top: 27px
+			color: #fff
+			padding: 0 10px
+			padding-right: 15px
+			font-size: 30px
+			font-family: "OswaldDemi",sans-serif
+			z-index: 1
+
+	.after_photo
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		overflow: hidden
+		z-index: 5
+		width: 50%
+		pointer-events: none
+		img
+			position: absolute
+			width: auto
+			top: 0
+			bottom: 0
+			right: 0
+
+		&::after
+			position: absolute
+			content: "ПОСЛЕ"
+			background: url('../img/reviews/before_after_bg.png') no-repeat
+			background-size: 100% 100%
+			display: inline-block
+			top: 0
+			right: 25px
+			top: 27px
+			color: #fff
+			padding: 0 10px
+			padding-right: 15px
+			font-size: 30px
+			font-family: "OswaldDemi",sans-serif
+			z-index: 1
+
+
+.photo
+	width: 42%
+	height: 100%
+	overflow: hidden
+	float: left
+	position: relative
+	img
+		min-height: 100%
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		transform: translate(-50%)
+		min-width: 100%
+
+.review-block
+	width: calc(100% - 42%)
+	height: 100%
+	float: right
+	background: url('../img/reviews/review_bg.jpg') right no-repeat
+	background-size: auto 100%
+	padding-top: 90px
+	padding-bottom: 90px
+	padding-left: 75px
+	text-align: center
+	position: relative
+	&::after
+		position: absolute
+		content: ""
+		bottom: 89px
+		left: 0
+		width: 100%
+		height: 80px
+		background: url('../img/reviews/fade-bg.png') no-repeat bottom
+		background-size: 100% auto
+
+
+	.review-block-inner
+		overflow: hidden
+		height: 100%
+		position: relative
+	
+	.review-text-inner
+		position: relative
+		padding-right: 100px
+
+
+	.to-all-reviews
+		display: block
+		color: #e73a24
+		text-transform: uppercase
+		font-size: 11px
+		position: absolute
+		width: 100%
+		text-align: center
+		top: 60px
+		left: 0
+
+.review-title
+	color: #e73a24
+	font-size: 50px
+	font-family: "OswaldDemi"
+	text-transform: uppercase
+	position: relative
+	padding: 0 50px
+	margin-bottom: 50px
+	&.big-tab-visible
+		&::before
+			content: none
+		padding-top: 100px
+		background: url('../img/reviews/mobile-title-bg.jpg')
+		background-size: cover
+		text-align: center
+		font-size: 40px
+		line-height: 60px
+		margin-bottom: 0
+		span
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				background: url("../img/quotes.png") no-repeat
+				background-size: 100% 100%
+				opacity: .2
+				left: -40px
+				top: -30px
+				width: 40px
+				height: 40px
+		&::before
+			top: 70px
+			left: 70px
+		.name-age
+			margin-top: 15px
+			margin-bottom: 0
+			line-height: 1
+			margin-bottom: 15px
+		.soc-links
+			padding-bottom: 20px
+			margin-bottom: 0
+			a
+				height: 34px
+				width: 34px
+
+	&::before
+		position: absolute
+		content: ""
+		height: 40px
+		width: 41px
+		background: url('../img/quotes.png') no-repeat
+		top: 0
+		left: 25px
+		opacity: .2
+
+.name-age
+	color: #fff
+	font-size: 17px
+	margin-bottom: 13px
+
+.soc-links
+	position: static
+	margin-bottom: 50px
+
+.review-text
+	font-weight: 300
+	font-style: italic
+	font-size: 19px
+	color: #fff
+	line-height: 28px
+	text-align: left
+	margin-bottom: 75px
+
+.share-buttons
+	text-align: left
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+	position: relative
+	z-index: 1
+	.text
+		color: #fff
+		text-transform: uppercase
+		font-weight: 300
+		font-size: 11px
+		display: inline-block
+		margin-right: 4px
+	div[class$="btn"]
+		width: 96px
+		height: 27px
+		display: inline-block
+		margin: 0 4px
+		cursor: pointer
+		transition: .25s
+		img
+			max-width: 100%
+		&:hover
+			transform: scale(1.04)
+			transition: .25s
+
+#ascrail2000
+	width: 5px !important
+	border-radius: 5px !important
+	right: 40px !important
+	left: auto !important
+
+.nicescroll-cursors
+	width: 20px !important
+	height: 20px !important
+	background: #e4362d !important
+	border: 2px solid #b8b9b9 !important
+	margin-right: -7px !important
+
+@import "all_responsive";
+
+@media (max-width: 1024px)
+	.screen
+		height: auto
+	.photo	
+		height: 600px
+		float: none
+		width: 100%
+	.before_after
+		width: 100%
+		height: 600px
+		float: none
+		.before_photo,.after_photo
+			&::before
+				font-size: 24px
+				left: 40px
+				top: 20px
+			&::after
+				font-size: 24px
+				right: 40px
+				top: 20px
+	.review-title.big-tab-visible
+		padding-top: 170px
+	.review-block
+		width: 100%
+		float: none
+		padding: 0 100px
+		padding-top: 65px
+		padding-bottom: 95px
+		background-size: auto
+		&::after
+			content: none
+		.review-text-inner
+			padding-right: 0
+		.review-title,.to-all-reviews,.name-age,.soc-links
+			display: none
+		.review-text
+			margin-bottom: 35px
+			text-align: center
+		.share-buttons
+			display: block
+			text-align: center
+			margin-bottom: 0
+			.text
+				display: block
+				margin-bottom: 25px
+
+@media (max-width: 767px)
+	.photo
+		height: 320px
+	.before_after
+		height: 320px
+		.before_photo,.after_photo
+			&::before
+				font-size: 18px
+				left: 20px
+				top: 15px
+			&::after
+				font-size: 18px
+				right: 20px
+				top: 15px
+	.review-title.big-tab-visible
+		font-size: 27px
+		padding-top: 80px
+		line-height: 40px
+		span::after
+			left: -30px
+			top: -20px
+			width: 18px
+			height: 18px
+			background-size: 100% 100%
+		.name-age
+			font-size: 12px
+			letter-spacing: 1px
+	.review-block
+		padding: 0 35px
+		padding-top: 40px
+		padding-bottom: 80px
+		.review-text
+			font-size: 14px
+			line-height: 20px
+
+@media (max-width: 767px) and (orientation: portrait)
+	.before_after
+		height: 450px
+	.photo
+		height: 450px
+	.review-title.big-tab-visible
+		padding-top: 100px
+		line-height: 33px
+		font-size: 27px
+	.review-block
+		background-size: cover
+		padding-left: 20px
+		padding-right: 20px
+
+@media (max-width: 374px)
+	.share-buttons
+		div[class$="btn"]
+			width: 80px

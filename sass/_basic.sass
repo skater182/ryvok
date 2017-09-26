@@ -1,0 +1,987 @@
+@keyframes fly
+	from {transform: translateY(0) translateX(-50%)}
+	to {transform: translateY(-5px) translateX(-50%)}
+
+@keyframes flyAbonements
+	from {transform: translateY(0)}
+	to {transform: translateY(-5px)}
+
+@keyframes flyingGlove
+	from {transform: scale(1)}
+	to {transform: scale(1.1)}
+
+
+@keyframes flyMouse
+	from {transform: translate(-50%,0)}
+	to {transform: translate(-50%,-5px)}
+@keyframes dash
+	0%
+		stroke-dashoffset: 1000
+	100%
+		stroke-dashoffset: 0
+
+@keyframes dash-back
+	0%
+		stroke-dashoffset: 0
+	100%
+		stroke-dashoffset: 1000
+
+@keyframes beat
+	from
+		transform: translateY(0)
+	to
+		transform: translateY(-5px)
+
+@keyframes beatColor
+	from
+		fill: #fff
+	to
+		fill: #d51215
+
+@keyframes ryvok
+	0%
+		stroke-dashoffset: 2400
+	100%
+		stroke-dashoffset: 0
+		stroke-width: 15
+
+@keyframes oddLine
+	0%
+		transform: translateX(-2000px)
+		opacity: 1
+	10%
+		transform: translateX(0)
+		opacity: 1
+	80%
+		transform: translateX(50px)
+		opacity: 1
+	100%
+		transform: translateX(2000px)
+		opacity: 0
+
+@keyframes evenLine
+	0%
+		transform: translateX(2000px)
+		opacity: 1
+	10%
+		transform: translateX(0)
+		opacity: 1
+	80%
+		transform: translateX(-50px)
+		opacity: 1
+	100%
+		transform: translateX(-2000px)
+		opacity: 0
+
+@keyframes toggleSlideFront
+	70%
+		transform: translateY(-10%)
+	100%
+		transform: translateY(-100%)
+
+@keyframes toggleSlideBack
+	70%
+		transform: translateY(-90%)
+	100%
+		transform: translateY(0)
+
+@keyframes togglePhotoBack
+	70%
+		transform: translateY(5%)
+	100%
+		transform: translateY(30%)
+
+@keyframes togglePhoto
+	70%
+		transform: translateY(25%)
+	100%
+		transform: translateY(0)
+
+@keyframes pulse
+	0%
+		transform: scale(0) 
+		opacity: 0.1
+	25%
+		transform: scale(0)
+		opacity: 0.3
+	50%
+		opacity: 0.5
+	75%
+		opacity: 0.7
+	100%
+		transform: scale(1)
+		opacity: 0.1
+
+*
+	box-sizing: border-box
+
+ul 
+	list-style: none
+	margin: 0
+	padding: 0
+
+a[href^=tel]
+	color:#FFF
+	text-decoration:none
+
+
+html
+	width: 100%
+	height: 100%
+
+body 
+	font-family: 'Ubuntu', sans-serif
+	width: 100%
+	overflow-x: hidden
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+
+.main-wrapper
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+	.screen
+		flex: 1
+
+.clearfix
+	display: table
+	clear: both
+
+.main-menu
+	background: rgba(0,0,0,.2)
+	height: 30px
+	transition: none
+	z-index: 100
+	position: fixed
+	left: 165px
+	right: 0
+	top: 0
+	width: auto
+	transition: .4s
+	opacity: 0
+	&.visible
+		opacity: 1
+		transition: .4s
+	ul
+		overflow: hidden
+		max-width: 1440px
+		text-align: center
+		margin: 0 auto
+		li
+			display: inline-block
+			margin: 0 40px
+			font-size: 10px
+			color: #fff
+			// line-height: 30px
+			font-weight: 500
+			text-transform: uppercase
+			&:first-child
+				margin-left: 20px
+			&:last-child
+				margin-right: 20px
+			a
+				text-decoration: none
+				text-transform: uppercase
+				font-size: 10px
+				color: #fff
+				line-height: 30px
+				font-weight: 500
+				border-bottom: 1px dotted #fff
+				&.active
+					color: rgb(255, 72, 0)
+					border-color: rgb(255, 72, 0)
+
+.bottom-button
+	display: inline-block
+	padding: 10px 30px
+	color: #fff
+	line-height: 1
+	white-space: nowrap
+	text-transform: uppercase
+	font-style: italic
+	font-weight: 700
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 3.3%
+	z-index: 20
+	letter-spacing: 4px
+	&::after
+		content: ''
+		position: absolute
+		width: 15px
+		height: 24px
+		background: url('../img/svg/down-arrow.svg') no-repeat
+		left: 50%
+		top: 0
+		transform: translateX(-50%)
+		animation: fly 1s infinite alternate
+	&:hover
+		cursor: pointer
+
+
+.mobile
+	display: none
+
+.close-button
+	position: absolute
+	right: 15px
+	top: 15px
+	height: 60px
+	width: 60px
+	&:hover
+		cursor: pointer
+	.line	
+		height: 50px
+		width: 5px
+		background: #e73a24
+		position: absolute
+		top: 0
+		left: calc(50% - 7px)
+		&.left
+			transform: rotate(-45deg)
+		&.right
+			transform: rotate(45deg)
+
+.top-tab-menu
+	background: #242321
+	top: 0
+	z-index: 200
+	width: 100%
+	left: 0
+	position: fixed
+	padding: 12px
+	padding-bottom: 30px
+	display: none
+	.slider-wrapper	
+		position: absolute
+		width: 100%
+		top: 12px
+		opacity: 0
+		transition: 2s
+	.slider
+		position: relative
+		.owl-item
+			width: 100%
+		img
+			width: 155px
+			height: 55px
+		width: 155px
+		margin: 0 auto
+		.owl-prev,.owl-next
+			width: 17px
+			height: 33px
+			text-indent: -9999px
+			background: url('../img/top-logo-slider-arrow.png')
+			position: absolute
+			opacity: .6
+			&:hover
+				opacity: 1
+		.owl-prev
+			transform: rotateY(-180deg) translateY(-75%)
+			top: 50%
+			right: calc(100% + 25px)
+		.owl-next
+			left: calc(100% + 25px)
+			top: 50%
+			transform: translateY(-75%)
+
+
+	.slide-content
+		position: absolute
+		top: 100%
+		height: 500px
+		width: 100%
+		left: 0
+		z-index: 200
+		max-height: 0
+		overflow: hidden
+		transition: .6s
+		&.active
+			max-height: 1000px
+			transition: .6s
+	.menu-icon
+		margin: 0
+		margin-left: 25px
+		height: 42px
+		width: 42px
+		z-index: 2
+		&:hover
+			.line
+				background: #ff4800
+		img
+			width: 100%
+			transition: .25s
+		.text
+			top: calc(100% + 5px)
+			font-size: 13px
+			transition: .25s
+		.line	
+			display: inline-block
+			width: 5px
+			height: 50px
+			background: #fff
+			border-radius: 4px
+			position: absolute
+			top: 5px
+			left: calc(50% - 3px)
+			opacity: 0
+			transition: .6s
+			transform: rotate(0)
+		&.active
+			.line
+				opacity: 1
+				&.left
+					transform: rotate(-45deg)
+					transition: .6s
+				&.right
+					transform: rotate(45deg)
+					transition: .6s
+			.text,img
+				opacity: 0
+				transition: .25s
+
+	ul
+		background: rgba(0,0,0,.95)
+		padding-top: 28px
+		width: 100%
+		text-align: center
+		li
+			padding: 17px 0
+			border-bottom: 1px solid rgba(255,255,255,.7)
+			a
+				color: #fff
+				font-size: 16px
+				text-transform: uppercase
+				text-decoration: none
+				&:focus,&:active,&:hover
+					color: #e23d00
+	.soc-links
+		position: static
+		padding-top: 45px
+		background: rgba(0,0,0,.95)
+		padding-bottom: 25px
+		text-align: center
+		a
+			width: 33px
+			height: 33px
+
+.menu-icon
+	position: relative
+	margin-bottom: 30px
+	height: 56px
+	width: 56px
+	margin: 0 auto
+	transition: .25s
+	&.active
+		svg
+			opacity: 0
+	.text
+		color: #fff
+		position: absolute
+		top: calc(100% + 10px)
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 10px
+		transition: .25s
+	svg
+		position: absolute
+		transition: .25s
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+	&:hover
+		cursor: pointer
+		.st0
+			fill: #ff4800
+			transition: .25s
+		.text
+			color: #ff4800
+			transition: .24s
+
+.soc-links
+	left: 0
+	width: 100%
+	bottom: 40px
+	position: relative
+	a
+		display: inline-block
+		margin: 0 6px
+		width: 29px
+		height: 29px
+		transition: .25s
+		&:hover
+			transform: scale(1.1)
+			transition: .25s
+			.st0
+				fill: #ff4800
+
+.main-wrapper
+	width: calc(100% - 140px)
+	float: left
+	margin-left: 140px
+	position: relative
+	&.inner
+		width: calc(100% - 165px)
+		float: left
+		margin-left: 165px
+		position: relative
+
+form
+	overflow: hidden
+	.form-element
+		float: left
+		margin: 0 30px
+		&.name
+			width: 350px
+			margin-left: 0
+		&.email
+			width: 350px
+		&.phone
+			width: 245px
+			margin-right: 0
+			input
+				&::-webkit-input-placeholder
+				  color: #d3d2d1
+				  letter-spacing: 1px
+				&::-moz-placeholder
+				  color: #d3d2d1
+				  letter-spacing: 1px
+				&:-ms-input-placeholder
+				  color: #d3d2d1
+				  letter-spacing: 1px
+				&:-moz-placeholder
+				  color: #d3d2d1
+				  letter-spacing: 1px
+		.input-wrapper.has-errors
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				width: 24px
+				height: 23px
+				background: url('../img/error-icon.png')
+				right: 20px
+				top: 50%
+				transform: translateY(-50%)
+
+		label
+			font-family: 'Open Sans', sans-serif;
+			font-size: 17px
+			font-style: italic
+			color: #fff
+			display: block
+			margin-bottom: 8px
+			margin-left: 8px
+			&.error
+				position: absolute !important
+				margin-top: 5px
+		input,textarea
+			&:focus
+				outline: none
+			display: block
+			width: 100%
+			max-width: 100%
+			background: url('../img/input-bg.png') no-repeat
+			background-size: 100% 100%
+			border: 0
+			padding: 15px 25px
+			box-sizing: border-box
+			font-family: "OswaldDemi",sans-serif
+			font-size: 20px
+			line-height: 1
+			color: #ff4e00
+			text-transform: uppercase
+			&.error
+				color: #ff1713
+
+
+	.form-element.text
+		textarea
+			background: url('../img/textarea-bg.png') no-repeat
+			background-size: 100% 100%
+			padding: 20px 45px
+			resize: none
+			font-family: "Ubuntu",sans-serif
+			font-style: italic
+			color: #373737
+			font-size: 17px
+			line-height: 25px
+			text-transform: none
+			height: 180px
+		label
+			text-indent: -9999px
+
+	.form-submit
+		text-align: center
+		display: inline-block
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 2
+		position: absolute
+		bottom: 30px
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			top: 0
+			bottom: 0
+			left: 0
+			background: url('../img/svg/dokinul-knopka-zayavka-default.svg') no-repeat
+			background-size: 100% 100%
+			transition: .25s
+			opacity: 1
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			top: 0
+			bottom: 0
+			left: 0
+			background: url('../img/svg/dokinul-knopka-zayavka.svg') no-repeat
+			background-size: 100% 100%
+			transition: .25s
+			opacity: 0
+
+		&:hover
+				cursor: pointer
+				transition: .25s
+				&::before
+					opacity: 0
+					transition: .25s
+				&::after
+					opacity: 1
+					transition: .25s
+
+		&::before
+			content: ''
+			clear: both
+		input[type="submit"]
+			background: none
+			border: 0
+			color: #fff
+			text-transform: uppercase
+			font-family: "Open Sans", sans-serif
+			font-weight: bold
+			letter-spacing: 4px
+			font-size: 12px
+			padding: 23px 35px
+			transition: .25s
+			position: relative
+			z-index: 2
+
+			&:hover
+				cursor: pointer
+			
+			&:focus
+				outline: none
+
+.screen-title
+	color: #e73a24
+	display: inline-block
+	text-transform: uppercase
+	font-size: 34px
+	font-family: 'OswaldDemi',sans-serif
+	text-align: center
+
+.screen-title
+	margin-top: 30px
+	position: relative
+	.go-to-page 
+		position: absolute
+		left: calc(100% + 60px)
+		bottom: 0
+		width: 150px
+		a
+			font-size: 12px
+			color: #e73a24
+.title-wrapper
+	text-align: center
+
+.parallax-window
+	min-height: 350px
+	background: transparent
+
+.page-title-bg
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 350px
+	img
+		min-width: 100%
+		min-height: 100%
+
+.inner-page-title
+	height: 350px
+	position: relative
+	overflow: hidden
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		background: rgba(0,0,0,.6)
+		z-index: 1
+		left: 0
+	img
+		min-width: 100%
+		min-height: 100%
+
+	.page-title
+		color: #e73a24
+		position: absolute
+		top: 0
+		left: 0
+		height: 350px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		font-family: "OswaldDemi",sans-serif
+		font-size: 80px
+		z-index: 2
+		text-shadow: 1px 5px 3px rgba(0,0,0,.5)
+		width: 100%
+		text-align: center
+		.text
+			position: relative
+
+	.title-logo
+		width: 85px
+		height: 35px
+		margin: 0 auto
+		margin-top: 30px
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		svg
+			position: absolute
+			top: 0
+			left: 0
+
+.general-menu
+	background: rgba(60,60,60,.97)
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 100%
+	left: 0
+	z-index: 1000
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	transform: translateX(100%)
+	transition: .5s
+	display: flex
+	&.visible
+		transform: translateX(0)
+		transition: .5s
+	.partner-logo
+		position: absolute
+		top: 40px
+		right: 40px
+		width: 227px
+		height: 79px
+		img
+			width: 100%
+			height: 100%
+
+	.close-button
+		width: 45px
+		height: 45px
+		position: absolute
+		left: 60px
+		top: 55px
+
+	.menu
+		text-align: center
+		li
+			margin-bottom: 35px
+			a
+				color: #fff
+				font-size: 30px
+				font-weight: bold
+				font-style: italic
+				letter-spacing: 4px
+				line-height: 40px
+				text-transform: uppercase
+				text-decoration: none
+				border-bottom: 1px solid $main-site-color
+				position: relative
+				white-space: nowrap
+				transition: .25s
+				&:hover
+					color: $main-site-color
+					transition: .25s
+
+	.logo
+		width: 85px
+		height: 33px
+		margin-bottom: 70px
+		.st0
+			fill: #fff
+
+.promo-block
+	overflow: hidden
+	.photo
+		img
+			transition: .6s
+			min-width: 100%
+	&:hover
+		cursor: pointer
+		.photo
+			img
+				transform: scale(1.1)
+				transition: .6s
+	.text-block
+		position: absolute
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		padding: 0 30px
+	.beat-img
+		width: 118px
+		height: 45px
+		margin-bottom: 50px
+	.promo-text
+		text-transform: uppercase
+		font-style: italic
+		font-size: 21px
+		color: #fff
+		font-weight: bold
+		line-height: 35px
+		margin-bottom: 60px
+	.link
+		display: inline-block
+		width: 240px
+		height: 37px
+		position: relative
+		color: #fff
+		text-transform: uppercase
+		.link-text
+			color: $main-site-color
+			position: relative
+			z-index: 2
+			line-height: 39px
+			transition: .25s
+			letter-spacing: 1.5px
+			font-weight: 500
+		svg
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			left: 0
+			.bd
+				fill: #fff
+	&:hover
+		.link-text
+			color: #fff
+			transition: .25s
+		svg
+			.bd
+				transition: .25s
+				fill: $main-site-color
+
+
+.content-block
+	position: relative
+	z-index: 5
+
+.select-block
+	text-align: center
+	margin-bottom: 55px
+	position: relative
+	z-index: 100
+	.items-wrapper
+		visibility: hidden
+		background: #fff
+		text-align: left
+		color: $main-site-color
+		position: absolute
+		width: 100%
+		left: 0
+		top: 100%
+		border: 2px solid $main-site-color
+		border-top: 0
+		max-height: 530px	
+		padding-bottom: 30px
+		&.visible
+			visibility: visible
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			top: 0
+			height: 60px
+			z-index: 1
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+35,7db9e8+100&1+13,0+98 */
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 13%, rgba(255,255,255,0.74) 35%, rgba(129,187,233,0) 98%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 13%,rgba(255,255,255,0.74) 35%,rgba(129,187,233,0) 98%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 13%,rgba(255,255,255,0.74) 35%,rgba(129,187,233,0) 98%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			bottom: 0
+			height: 60px
+			z-index: 1
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+100&0+2,1+98 */
+			background: -moz-linear-gradient(top, rgba(255,255,255,0) 1%, rgba(255,255,255,0) 2%, rgba(255,255,255,1) 98%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 2%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 2%,rgba(255,255,255,1) 98%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		.items
+			max-height: 500px
+		.select-item
+			padding-left: 20px
+			margin-bottom: 20px
+			font-weight: bold
+			padding-right: 40px
+			cursor: pointer
+			&:last-child
+				margin-bottom: 0
+			span:not(.select-text)
+				color: #6e6d6d
+				font-weight: normal
+				display: inline-block
+				margin-top: 10px
+	.city-select,.place-select
+		display: inline-block
+		position: relative
+		vertical-align: top
+		.selected-item
+			background: #fff
+			color: $main-site-color
+			font-weight: bold
+			font-size: 14px
+			padding: 20px 0
+			padding-left: 20px
+			padding-right: 50px
+			border-radius: 5px
+			position: relative
+			cursor: pointer
+			line-height: 1.2
+			min-width: 232px
+			max-width: 262px
+			text-align: left
+			font-family: "Ubuntu",sans-serif
+			&::after
+				content: ''
+				position: absolute
+				right: 20px
+				top: 50%
+				transform: translateY(-50%)
+				width: 11px
+				height: 7px
+				background: url('../img/select-arrow.png')
+	.city-select
+		margin-right: 25px
+	.place-select
+		margin-left: 25px
+		transition: .4s
+		&.not-active
+			opacity: 0
+			transition: .4s
+
+.select-block
+	.nicescroll-rails-vr
+		width: 2px!important
+		max-height: 500px!important
+
+	.nicescroll-cursors
+	    width: 10px !important
+	    height: 10px !important
+	    background: #e4362d !important
+	    border: none !important
+	    margin-right: -4px !important
+	    box-shadow: 0 2px 3px 0 rgba(0,0,0,.5)
+
+
+.form-element
+	select
+		display: none
+
+.popup
+	form
+		overflow: visible
+	.select-block .items-wrapper
+		max-height: 230px
+		.items
+			max-height: 200px
+	.select-block .place-select
+		margin-left: 0
+		width: 100%
+	.select-block .city-select
+		width: 100%
+		margin-right: 0
+	.select-block .city-select .selected-item, .select-block .place-select .selected-item
+		width: 100%
+		min-width: 0
+		max-width: none
+		background: url("../img/input-bg.png") no-repeat
+		background-size: 100% 100%
+		padding: 21px 25px
+
+.site-preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 165px
+	background: #000
+	z-index: 109
+	img
+		width: 57px
+		height: 57px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		display: none
+	svg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		display: none
+	&::after
+		content: ''
+		background: #000
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -20px
+		width: 20px
+
+
+@media (min-width: 1601px)
+	.soc-links
+		position: absolute
+
+@media(min-width: 1025px) 
+	.big-tab-visible,.tab-visible
+		display: none
+
+@media(max-width: 1024px) 
+	.big-tab-visible
+		display: block
+		
+@media (max-width: 991px)
+	.tab-visible
+		display: block

@@ -1,0 +1,795 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "bottom_buttons";
+@import "basic";
+@import "side_menu";
+@import "footer";
+@import "popup_form";
+
+
+.main-wrapper
+	margin-left: 0
+	width: 100%
+
+.ask
+	left: 0
+	bottom: 0 !important
+	position: absolute !important
+	z-index: 200
+	&.ended
+		left: 0
+
+.get-lesson
+	bottom: 0 !important
+	position: absolute !important
+	z-index: 200
+
+
+.fixed-btn
+	fill: $main-site-color
+	opacity: 1
+
+.screen
+	height: 100vh
+	overflow: hidden
+	position: relative
+	min-height: 768px
+
+.main-wrapper
+	overflow-x: hidden
+
+.first-screen
+	background: #242321
+
+.intro-logos
+	overflow: hidden
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	width: 100%
+	left: 0
+	height: 100%
+	.logo-wrapper
+		float: left
+		width: 25%
+		text-align: center
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	.item-wrapper
+		position: relative
+		width: 100%
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+	.item
+		width: 125px
+		height: 125px
+		position: relative
+		transition: .4s
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		&:not(.ryvok)
+			svg:first-child
+				width: 40px
+		&.blog
+			padding-top: 10px
+			svg:first-child
+				position: absolute
+				top: 30px
+				left: 50%
+				transform: translateX(-50%)
+		a
+			display: block
+			width: 100%
+		&:hover
+			transform: scale(1.5)
+			transition: .4s
+		svg
+			position: relative
+			z-index: 2
+			&:first-child
+				z-index: 10
+				position: relative
+	.item:hover + .tooltip
+		opacity: 1
+		transition: .4s
+		transform: translate(-50%,0)
+	.tooltip
+		color: #fff
+		font-size: 16px
+		width: 75%
+		padding: 20px
+		padding-bottom: 20px
+		border-radius: 10px
+		position: relative
+		margin-bottom: 25px
+		position: absolute
+		bottom: 100%
+		left: 50%
+		transition: .4s
+		opacity: 0
+		transform: translate(-50%,-100px)
+		border: 1px solid #fff
+		border-radius: 10px
+		&::before
+			content: ''
+			position: absolute
+			left: calc(50%)
+			bottom: -22px
+			border: 11px solid transparent
+			border-top: 11px solid #fff
+			transform: translateX(-50%)
+		&::after
+			content: ''
+			z-index: 2
+			position: absolute
+			left: calc(50%)
+			bottom: -19px
+			border: 10px solid transparent
+			border-top: 10px solid #242321
+			transform: translateX(-50%)
+		.bg
+			svg
+				fill: none
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				bottom: 0
+	.ryvok
+		.tooltip
+			border-color: $main-site-color
+			&::before
+				border-top-color: $main-site-color
+	.teens
+		.tooltip
+			border-color: $yellow
+			&::before
+				border-top-color: $yellow
+	.beat
+		.tooltip
+			border-color: $red
+			&::before
+				border-top-color: $red
+		svg:nth-child(2)
+			margin-top: 5px
+			overflow: visible
+	.blog
+		.tooltip
+			border-color: #36A9E1
+			&::before
+				border-top-color: #36A9E1
+		svg:nth-child(2)
+			margin-top: -5px
+	.logo-bg
+		width: 100px
+		height: 100px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		border-radius: 50%
+
+.second-screen
+	background: url('../img/ryvok-fon.jpg') no-repeat center center
+	background-size: 100% 100%
+	.board
+		height: 100vh
+		width: 100%
+		.item
+			height: 50%
+			width: 25%
+			overflow: hidden
+			float: left
+			position: relative
+			& > a 
+				display: block
+				height: 100%
+			&.big
+				width: 50%
+			&:hover
+				cursor: pointer
+				.photo
+					img
+						transform: scale(1.1)
+						transition: .6s
+				.text
+					background: rgba(231, 58, 36, 0.8)
+					transition: .4s
+			.photo
+				height: 100%
+				img
+					min-width: 100%
+					transition: .6s
+					min-height: 100%
+			.text
+				position: absolute
+				bottom: 0
+				width: 100%
+				background: rgba(0,0,0,.2)
+				text-align: center
+				height: 90px
+				display: flex
+				align-items: center
+				justify-content: center
+				text-shadow: 1px 2px 1px rgba(0,0,0,.6)
+				line-height: 30px
+				padding: 0 20px
+				transition: .4s
+				a
+					font-size: 23px
+					color: #fff
+					font-family: "OswaldDemi",sans-serif
+					text-decoration: none
+				.tags
+					position: absolute
+					width: 100%
+					top: -13px
+					text-align: center
+					left: 0
+					.tag
+						margin: 0 5px
+						height: 23px
+						display: inline-block
+						background: url('../img/svg/dokinul-tag-previews.svg') no-repeat
+						color: #ff4800
+						text-shadow: none
+						padding: 0 20px
+						text-transform: uppercase
+						font-weight: bold
+						font-size: 12px
+						line-height: 22px
+						letter-spacing: 1px
+						font-family: Ubuntu, sans-serif
+
+		.review-block
+			.text-block
+				position: absolute
+				width: 100%
+				top: 0
+				bottom: 0
+				left: 0
+				text-align: center
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				padding: 0 30px
+				font-size: 21px
+				line-height: 35px
+			.quotes
+				margin-bottom: 20px
+			.review-text
+				font-style: italic
+				font-weight: bold
+				text-transform: uppercase
+				color: #464646
+				margin-bottom: 15px
+			.link
+				font-size: 12px
+				color: #464646
+				font-style: italic
+				display: inline-block
+				line-height: 17px
+				text-decoration: none
+		.promo-block
+			.beat-img
+				.st0
+					fill: #fff
+
+.intro-logos
+	.item
+		transition: .25s
+		svg
+			width: 100%
+		.svg-teens-elem
+			transition: .2s
+		.svg-blog-bg
+			stroke-dashoffset: 1000
+			stroke-dasharray: 1000
+			animation: dash-back .5s linear forwards
+			stroke: #36A9E1
+		&.blog
+			svg
+				.st0
+					fill: #fff
+		&.blog.active
+			.svg-blog-bg
+				stroke-dashoffset: 0
+				stroke-dasharray: 0
+		&.ryvok
+			&:not(.active)
+				#ryvokPath
+					stroke: #fff
+			#clip path
+				overflow: hidden
+			svg
+				stroke-width: 17
+				transition:transform .5s ease-out
+			#ryvokPath
+				stroke-dasharray: 2400
+				stroke-dashoffset: 0
+				stroke-width: 15
+				-webkit-clip-path: url(#clip)
+				clip-path: url(#clip)
+				fill: none
+			&:hover
+				#ryvokPath
+					stroke-dashoffset: 2400
+					stroke-width: 10
+					animation: ryvok 5.2s linear forwards
+					stroke: #ff4800
+		&.beat
+			.st0
+				transition: .25s
+				fill: #fff
+			&.active
+				.st0
+					fill: #d51215
+		&.beat:hover
+			.st0
+				fill: #d51215
+				transition: .25s
+			#first .st0
+				animation: beat .2s alternate 2
+
+
+			#second .st0
+				animation: beat .2s .1s alternate 2
+
+
+			#third .st0
+				animation: beat .2s .2s alternate 2
+
+
+			#fourth .st0
+				animation: beat .2s .3s alternate 2
+
+
+			#fifth .st0
+				animation: beat .2s .4s alternate 2
+
+
+			#sixth .st0
+				animation: beat .2s .5s alternate 2
+
+
+			#seventh .st0
+				animation: beat .2s .6s alternate 2
+
+
+			#eighth .st0
+				animation: beat .2s .7s alternate 2
+
+
+			#ninth .st0
+				animation: beat .2s .8s alternate 2
+
+
+			#tenth .st0
+				animation: beat .2s .9s alternate 2
+
+
+			#eleventh .st0
+				animation: beat .2s 1s alternate 2
+
+
+			#twelves .st0
+				animation: beat .2s 1.1s alternate 2
+
+
+
+			#thirteenth .st0
+				animation: beat .2s 1.2s alternate 2
+
+
+
+			#fourteenth .st0
+				animation: beat .2s 1.3s alternate 2
+
+
+
+			#fifteenth .st0
+				animation: beat .2s 1.4s alternate 2
+
+
+
+			#sixteenth .st0
+				animation: beat .2s 1.5s alternate 2
+
+
+
+			#seventeenth .st0
+				animation: beat .2s 1.6s alternate 2
+
+
+			#eighteenth .st0
+				animation: beat .2s 1.6s alternate 2
+
+		&:hover
+			.svg-teens-elem
+				transition: .2s
+			.svg-blog-bg
+				animation: dash .5s linear forwards
+
+		&.teens
+			&.active
+				path
+					fill: #FFCD00
+			path
+				fill: #fff
+			&:hover
+				path
+					transform-origin: 50% 50%
+					transition: .25s
+					fill: #FFCD00
+				#XMLID_28_
+					transform: translate(0,-3px)
+				#XMLID_29_
+					transform: translate(2px,1px)
+				#XMLID_30_
+					transform: translate(-2px,1px)
+				#XMLID_31_
+					transform: translate(0,2px)
+				#XMLID_32_
+					transform: translate(-2px,0) rotate(-5deg)
+				#XMLID_33_
+					transform: translate(0,-2px)
+				#XMLID_34_
+					transform: translate(0,-2px) rotate(-10deg)
+				#XMLID_35_
+					transform: translate(0,-2px) rotate(-10deg)
+				#XMLID_36_
+					transform: rotate(-10deg)
+				#XMLID_37_
+					transform: translate(-1px,0)
+				#XMLID_38_
+					transform: translate(0,1px) rotate(10deg)
+				#XMLID_39_
+					transform: translate(3px,-2px)
+				#XMLID_40_
+					transform: translate(0,-3px) rotate(50deg)
+				#XMLID_41_
+					transform: translate(0,1px) rotate(-5deg)
+				#XMLID_42_
+					transform: translate(0,1px) rotate(-10deg)
+				#XMLID_43_
+					transform: translate(1px,0)
+				#XMLID_44_
+					transform: translate(1px,0)
+				#XMLID_45_
+					transform: translate(1px,-3px)
+				#XMLID_46_
+					transform: translate(1px,0) rotate(-5deg)
+				#XMLID_47_
+					transform: translate(1px,-2px)
+				#XMLID_48_
+					transform: translate(1px,0) rotate(5deg)
+				#XMLID_49_
+					transform: translate(1px,-2px) rotate(-10deg)
+				#XMLID_50_
+					transform: translate(1px,0) rotate(5deg)
+
+.bottom-button
+	font-style: normal
+	border-radius: 50px
+	border: 1px solid #fff
+	line-height: 1
+	font-size: 11px
+	padding: 13px 30px
+	padding-top: 14px
+	bottom: 10%
+	letter-spacing: 2px
+	&::after
+		top: calc(100% + 25px)
+		left: 50%
+
+.menu-icon
+	position: absolute
+	z-index: 2
+	top: 45px
+	left: 55px
+	svg
+		.st0
+			fill: #fff
+
+.close-button
+	display: none
+	.line
+		background: #555
+		border-radius: 50px
+
+.soc-icons
+	position: absolute
+	right: 20px
+	top: 20px
+	a
+		display: inline-block
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+		svg
+			width: 30px
+			height: 30px
+			.st0
+				fill: #555
+
+.intro-menu
+	position: fixed
+	left: 165px
+	top: 0
+	bottom: 0
+	right: 0
+	background: rgba(255,255,255,.9)
+	justify-content: center
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	transition: 1s
+	transform: translateX(110%)
+	&.active
+		transform: translateX(0)
+		transition: 1s
+	&::before
+		content: ''
+		position: absolute
+		top: 45px
+		left: -60px
+		border: 30px solid transparent
+		border-right: 30px solid rgba(255,255,255,.9)
+	ul
+		li
+			margin-bottom: 30px
+			a
+				color: #555
+				text-transform: uppercase
+				text-decoration: none
+				font-size: 20px
+				line-height: 35px
+				border-bottom: 2px solid #f26522
+				display: inline-block
+				padding: 0 10px
+				font-weight: bold
+				transition: .25s
+				&:hover
+					color: #f26522
+					transition: .25s
+	
+	.dev-info
+		text-align: right
+		padding-top: 40px
+		vertical-align: top
+		float: right
+		position: absolute
+		left: 50%
+		bottom: 20px
+		transform: translateX(-50%)
+		.text-wrapper
+			text-align: left
+			display: inline-block
+			.text
+				position: relative
+				font-size: 12px
+				line-height: 14px
+				color: #555
+				&::after
+					position: absolute
+					content: ''
+					width: 36px
+					height: 26px
+					background: url('../img/svg/em-logo-orange.svg') no-repeat
+					right: calc(100% + 10px)
+					top: 4px
+				a
+					color: #f26522
+
+@import "all_responsive";
+
+@media (max-width: 1024px)
+	.screen
+		height: 50vh
+		min-height: 0
+	.menu-icon
+		top: 25px
+		left: 25px
+	.intro-menu
+		left: 135px
+		&::before
+			top: 25px
+	.second-screen 
+		.board
+			height: 100%
+			.item
+				height: 50%
+				.photo
+					img
+						width: auto
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%,-50%)
+				.text
+					line-height: 20px
+					padding: 0 10px
+					min-height: 60px
+					height: auto
+					a
+						font-size: 14px
+						font-family: "OswaldDemi",sans-serif
+			.promo-block
+				.promo-text
+					font-size: 12px
+					line-height: 20px
+				.text-block
+					padding: 0 20px
+				.beat-img
+					width: 70px
+					margin-bottom: 10px
+				.link
+					width: 100%
+					height: 25px
+					.link-text
+						line-height: 27px
+						font-size: 10px
+
+			.review-block
+				.quotes
+					width: 25px
+					margin-bottom: 10px
+					img
+						width: 100%
+				.text-block
+					padding: 0 25px
+				.review-text
+					font-size: 13px
+					line-height: 16px
+
+			.lifestyle-img
+				width: 70px
+				img
+					width: 100%
+
+@media (max-width: 767px)
+
+	.tooltip
+		display: none
+	.close-button
+		display: block
+
+	.intro-menu
+		left: 0
+		z-index: 10000
+		&::before
+			content: none
+		ul
+			li
+				margin-bottom: 22px
+				a
+					font-size: 14px
+					line-height: 22px
+					padding: 0 5px
+		.dev-info
+			.text-wrapper
+				.text
+					font-size: 10px
+
+		.close-button
+			top: 15px
+			left: 22px
+
+	.menu-icon
+		width: 30px
+		height: 30px
+		top: 15px
+		left: 15px
+		.text
+			top: calc(100% + 2px)
+
+	.bottom-button
+		font-size: 8px
+		&::after
+			width: 10px
+			height: 19px
+
+	.screen
+		height: auto
+		min-height: 100vh
+	
+	.intro-logos
+		position: static
+		transform: none
+		.logo-wrapper
+			width: 100%
+			float: none
+			height: auto
+			margin-bottom: 25px
+
+	.second-screen
+		height: auto
+		.board
+			height: auto
+			display: flex
+			flex-direction: column
+			.item
+				height: 430px
+				width: 100%
+				float: none
+				&.big
+					height: 215px
+					width: 100%
+				.text
+					a
+						font-size: 17px
+				.photo
+					img
+						position: static
+						transform: none
+						width: 100%
+				&:nth-child(1)
+					order: 1
+				&:nth-child(2)
+					order: 5
+				&:nth-child(3)
+					order: 6
+				&:nth-child(4)
+					order: 2
+				&:nth-child(5)
+					order: 4
+				&:nth-child(6)
+					order: 3
+			.promo-block
+				.link
+					width: 180px
+
+@media (max-width: 767px) and (orientation: landscape)
+	.intro-logos
+		position: absolute
+		transform: translateY(-50%)
+		.item
+			svg
+				width: 85%
+		.logo-wrapper
+			width: 25%
+			float: left
+			height: 100%
+
+	.second-screen
+		.board
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			.item
+				width: auto
+				flex: 1 50%
+				height: 100vh
+				&.big
+					height: 100vh
+					flex: 1 100%
+				&:nth-child(1)
+					order: 1
+				&:nth-child(2)
+					order: 6
+				&:nth-child(3)
+					order: 4
+				&:nth-child(4)
+					order: 2
+				&:nth-child(5)
+					order: 5
+				&:nth-child(6)
+					order: 3
+
+
+@media (max-width: 320px)
+	.intro-logos
+		.item
+			height: 100px

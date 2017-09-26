@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title "Рывок" в вашем клубе
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/partners.css")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/main.js")
+		script(src="js/partners.js")
+
+	body
+		.top-tab-menu
+
+			.menu-icon
+				include ../img/svg/site-menu-znachok.svg
+				span.text МЕНЮ
+				span.left.line
+				span.right.line
+
+
+			.slider-wrapper
+				.slider
+					.owl-carousel
+						.item
+							include ../img/svg/menu-ryvok.svg
+						.item
+							include ../img/svg/menu-beat.svg
+						.item
+							.sm-mrg.teens
+							include ../img/svg/menu-teens.svg
+						.item
+							.sm-mrg.blog
+							include ../img/svg/menu-blog.svg
+
+
+			.slide-content
+				ul
+					li
+						a(href="#whatIsThat") что такое «рывок»
+					li
+						a(href="#facts") 8 фактов о «рывке»
+					li
+						a(href="#results") результаты и отзывы
+					li
+						a(href="#abonements") абонементы
+					li
+						a(href="#answers") вопрос-ответ
+					li
+						a(href="#workingHours") расписание и запись
+					li
+						a(href="#contacts") контакты и карта
+
+				.soc-links
+						a(href="#" class="fb-link")
+							include ../img/svg/menu-soc-fb.svg
+						a(href="#" class="insta-link")
+							include ../img/svg/menu-soc-insta.svg
+
+		include parts/side_menu_inner.pug
+		
+		.main-wrapper.inner
+			.ask.inner #[.text Задать вопрос]
+				include ../img/svg/bw-plashka-vopros.svg
+			.get-lesson.inner
+				div Записаться #[span.desktop-part на тренировку]
+				include ../img/svg/bw-plashka-zapis-na-tren.svg
+
+			//- .inner-page-title.parallax-window(data-parallax="scroll" data-image-src="img/partners/title-bg.jpg")
+			//- 	.page-title 
+			//- 		.text "РЫВОК" В ВАШЕМ КЛУБЕ
+			//- 			.title-logo
+			//- 				include ../img/svg/menu-ryvok.svg
+
+			.content-block
+				.main-block
+					.bg-photos-logo
+						img(src="img/partners/transparent-logo-bg.png", alt="")
+					.bg-photos
+						.bg-photo
+							img(src="img/partners/photo-behind-logo.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo2.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo3.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo4.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo2.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo3.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo4.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo2.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo3.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo4.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo2.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo3.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo4.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo2.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo3.jpg", alt="")
+						.bg-photo
+							img(src="img/partners/photo-behind-logo4.jpg", alt="")
+					.partner-offer
+						.photo-in-rect
+							img(src="img/partners/max-in-rect.png", alt="")
+						.text-block
+							.orange-block.first партнерское предложение
+							.partner-text(id="partnerText") За пять лет развития Рывка я прошёл, что называется, «огонь, воду и медные трубы». Таким образом, мне удалось создать идеально работающий механизм. #[br] #[br] Сейчас я могу с гордостью заявить, что готов обеспечить партнерам:
+							.offer-items.mobile-hidden
+								.item 
+									.item-text минимальные#[br]затраты и риски
+									.line
+								.item 
+									.item-text высокий уровень#[br]прибыли
+									.line
+								.item 
+									.item-text быструю#[br]окупаемость
+									.line
+						.offer-items.mobile-visible
+							.item 
+								.item-text минимальные#[br]затраты и риски
+								.line
+							.item 
+								.item-text высокий уровень#[br]прибыли
+								.line
+							.item 
+								.item-text быструю#[br]окупаемость
+								.line
+					.clearfix
+					.offer-price-block
+							.text-block
+								.partner-text(id="offerText") Передавая вам программу, я лично и моя команда продолжают о ней заботиться, помогая и подсказывая вам в любой ситуации — от «как подобрать тренера», до «как правильно искать клиентов»
+							.price-block #[span.top-border] #[span.price 750$] #[span.price-text чистой прибыли в месяц #[br] от одной группы #[br] из 10 человек]
+					.clearfix
+					.partner-title-block Партнерство: математика
+					.math-block
+						.scrolling-max
+							img(src="img/partners/max-opacity.png", alt="")
+						.intro-price-block
+							.orange-block.second Единоразовый вступительный взнос:
+							.intro-price 1 200 $
+								.ps * сумма платежа зависит от региона и количества клубной сети
+						.intro-text-block 
+							p В него входит:
+							p - передача авторской методики тренировок на выбор: РЫВОК, РЫВОК-BEAT, РЫВОК-TEENS;
+							p - запуск новой группы лучшим тренером проекта либо автором программы;
+							p - обучение персонала, передача всех знаний и секретов;
+							p - комплект мотивационных и промо- материалов;
+							p - помощь в поиске тренеров;
+						.clearfix
+					.monthly-pay
+						.scrolling-photo
+							img(src="img/partners/scrolling-photo.jpg", alt="")
+						.monthly-price-block.mobile-visible
+							.orange-block.third ежемесячные отчисления:
+							.monthly-price #[span 1]00 $
+								.ps за одну группу
+						.monthly-price-text
+							p В него входит:
+							p - использование авторской методики тренировок в своем клубе
+							p - содействие в решении любых бизнес вопросов, касающихся проекта
+							p - контроль работы тренеров и повышение их квалификации
+							p - маркетинговая поддержка и общее регулярное продвижение в социальных сетях
+							p - размещение контактов и расписания вашего клуба на нашем корпоративном сайте
+						.monthly-price-block.mobile-hidden
+							.orange-block.third ежемесячные отчисления:
+							.monthly-price #[span 1]00 $
+								.ps за одну группу
+						.clearfix
+						.forward-text впереееееееед!
+					.form-btn-block
+						.form-btn 
+							.text Отправить заявку
+							.bg
+						.freedom-max
+							img(src="img/partners/max-liberty.png", alt="")
+					include parts/footer_partners.pug
+
+				//- .left-block.slide-wrap
+				//- 	.front-view.hidden
+				//- 		.item.hidden
+				//- 			.pink-rect
+				//- 			.avatar
+				//- 				img(src="img/partners/avatar.png", alt="")
+				//- 			.text В спортивной теме я уже больше десяти лет, пять из которых я посвятил Рывку, и продолжаю с удовольствием его развивать! Сейчас Рывок готов расширяться, и я открыт к партнерским предложениям. Но есть один важный момент, о котором речь пойдет дальше...
+				//- 		.item.hidden
+				//- 			.pink-rect
+				//- 			.avatar
+				//- 				img(src="img/partners/avatar.png", alt="")
+				//- 			.text ...на Рывке люди учатся побеждать, достигать, преодолевать и... #[br] ЛЮБИТЬ #[br]#[br] (это не метафора, так как на Рывке действительно завязывались теплые отношения)...
+
+						
+				//- 		.slide-nav
+				//- 			.next Читать дальше
+				//- 			.skip Пропустить вступление »
+				//- 	.photo.first
+				//- 		img.back(src="img/partners/first_slide.jpg", alt="")
+				//- 		img.front(src="img/partners/max_first_slide.png", alt="")
+				//- 	.photo.gen.unvisible
+				//- 		img(src="img/partners/second_image.jpg", alt="")
+				//- .right-block.slide-wrap
+				//- 	.front-view.active
+				//- 		.item.first
+				//- 			.title Физкульт-привет! :-)
+				//- 				.line
+				//- 			.text Перед тем как перейти к математике проекта, прошу уделить минутку моему короткому  обращению, так как сказанное дальше тоже влияет на принятие верного решения :-) #[br] Просто скролльте вниз, чтобы продолжить...
+				//- 		.item.hidden
+				//- 			.pink-rect
+				//- 			.avatar
+				//- 				img(src="img/partners/avatar.png", alt="")
+				//- 			.text ...«Рывок» с первого дня был спортом друзей. С первой тренировки «Рывок» заряжен дружеской поддержкой, искренностью и любовью — это тонкие материи, которые нельзя втиснуть в математику...
+				//- 		.item.hidden
+				//- 			.pink-rect
+				//- 			.avatar
+				//- 				img(src="img/partners/avatar.png", alt="")
+				//- 			.text ...и вот эту особую атмосферу я бы хотел распространить на каждый зал, где будет происходить «Рывок». Я буду рад поделиться «Рывком» с людьми у которых горит тот же огонь в сердце, что и у всех Рывковцев — бывших и будущих. Вы с нами? — Отлично, буду рад знакомству! :-) Теперь можем перейти к цифрам!
+				//- 		.slide-nav
+				//- 			.next Читать дальше
+				//- 			.skip Пропустить вступление »
+				//- 	.photo
+				//- 		img(src="img/partners/first_image.jpg", alt="")
+
+.popup.popup-window-form
+	form#popup_form(action="")
+		.title-wrapper
+			.screen-title Задать вопрос
+		.close-button
+			.line.left
+			.line.right
+		.form-element.name
+			label(for="popup-name") Имя, фамилия
+			.input-wrapper
+				input(type="text" id="popup-name" required)
+		.form-element.email
+			label(for="popup-email") Контактный emal:
+			.input-wrapper
+				input(type="email" id="popup-email" required)
+		.form-element.phone
+			label(for="popup-phone") Номер телефона:
+			.input-wrapper
+				input(type="text" id="popup-phone" required)
+		.form-element.text
+			label(for="message") .
+			textarea#message(name="", cols="30", rows="10")
+		.form-submit
+			input(type="submit" value="Отправить вопрос")
+	.popup.popup-thanks
+		.close-button
+			.line.left
+			.line.right
+		.text Ваш вопрос отправлен, спасибо!
+
+.popup.popup-window-form-2
+	form#popup_form-2(action="")
+		.title-wrapper
+			.screen-title Записаться на занятие
+		.close-button
+			.line.left
+			.line.right
+		.form-element.name
+			label(for="popup-name") Имя, фамилия
+			.input-wrapper
+				input(type="text" id="popup-name" required)
+		.form-element.email
+			label(for="popup-email") Контактный emal:
+			.input-wrapper
+				input(type="email" id="popup-email" required)
+		.form-element.phone
+			label(for="popup-phone") Номер телефона:
+			.input-wrapper
+				input(type="text" id="popup-phone" required)
+		.form-element.city
+			label(for="popup-city") Выберите город:
+			.select-block
+				.city-select
+					.selected-item Выберите город
+					.items-wrapper
+						.items
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+							.select-item Киев
+							.select-item Луцк
+							.select-item Нью-Йорк
+							.select-item Антананариву
+			.input-wrapper
+				select#city(name="")
+		.form-element.location
+			label(for="popup-location") Выберите локацию:
+			.select-block
+				.place-select
+					.selected-item Выберите локацию
+					.items-wrapper
+						.items
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+							.select-item #[span.select-text Фитнес-центр «Аквариум»]  #[span ул. Окуевича, 11/52, офис 4523 (044) 123-45-67, (067) 123-66-88]
+			.input-wrapper
+				select#popup-location(name="")
+		.form-submit
+			input(type="submit" value="Записаться")
+.popup.popup-thanks
+	.close-button
+		.line.left
+		.line.right
+	.text Ваш заявка отправлена, спасибо!
+
+.popup-background
+
+.general-menu
+	.partner-logo
+		a(href="http://www.morshinska.ua/" target="_blank")
+			img(src="img/gen-menu-partner.png", alt="")
+	.close-button
+		.line.left
+		.line.right
+	.logo
+		include ../img/svg/menu-ryvok.svg
+	ul.menu
+		li
+			a(href="#" data-text="Тарифы") Тарифы
+		li
+			a(href="#" data-text="Расписания") Расписания
+		li
+			a(href="#" data-text="Партнерство") Партнерство
+		li
+			a(href="#" data-text="Максим Ярошенко") Максим Ярошенко
+		li
+			a(href="#" data-text="Книга \"Фуд-экшн\"") Книга "Фуд-экшн"
+		li
+			a(href="#" data-text="Контакты") Контакты

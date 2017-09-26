@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no")
+		title Рывок
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:300,400")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700")
+		link(rel="stylesheet", href="css/libs.min.css")
+		link(rel="stylesheet", href="css/last.css")
+		script(src="js/libs.min.js")
+		script(src="js/mobile-chrome-vh-fix.js")
+		script(src="js/intro.js")
+	body
+		.menu-icon
+			include ../img/svg/site-menu-znachok.svg
+			span.text МЕНЮ
+			span.left.line
+			span.right.line
+				
+		.main-wrapper
+			
+			.first-screen.screen
+				//- .ask #[.text Задать вопрос]
+				//- 	include ../img/svg/bw-plashka-vopros.svg
+				//- .get-lesson
+				//- 	div Записаться на занятие
+				//- 	include ../img/svg/bw-plashka-zapis-na-tren.svg
+				.bottom-button Свежие новости
+				.intro-logos
+					.logo-wrapper.ryvok
+						.item-wrapper
+							.item.ryvok
+								a(href="#")
+									include ../img/svg/menu-ryvok-animated.svg
+								.logo-bg
+							.tooltip Ритмично-музыкальное безумие,которое заставит тебя покачиваться в такт Ритмично-музыкальное безумие, которое заставит тебя покачиваться в такт Ритмично-музыкальное безумие, которое заставит тебя покачиваться в такт
+					.logo-wrapper.beat
+						.item-wrapper
+							.item.beat
+								a(href="#")
+									include ../img/svg/menu-ryvok.svg
+									include ../img/svg/menu-beat.svg
+								.logo-bg
+							.tooltip Ритмично-музыкальное безумие, которое заставит тебя покачиваться в такт
+						
+					.logo-wrapper.teens
+						.item-wrapper
+							.item.teens
+								a(href="#")
+									include ../img/svg/menu-ryvok.svg
+									include ../img/svg/logo-teens-isxodnaya.svg
+								.logo-bg
+							.tooltip Ритмично-музыкальное безумие, которое заставит тебя покачиваться в такт
+						
+					.logo-wrapper.blog
+						.item-wrapper
+							.item.blog
+								a(href="#")
+									include ../img/svg/menu-ryvok.svg
+									include ../img/svg/logo-blog-final.svg
+								.logo-bg
+							.tooltip Ритмично-музыкальное безумие, которое заставит тебя покачиваться в такт
+
+
+			.second-screen.screen#board
+				.board
+					.item
+						.photo
+							img(src="img/promo-img1.jpg", alt="")
+						.text 
+							a(href="#") Ведущий тренер «Рывка» рекомендует грызть морковку!
+							.tags
+								.tag /блог
+					.item.big
+						.photo
+							img(src="img/promo-img2.jpg", alt="")
+						.text 
+							a(href="#") Большое интервью с первой бит-тренировки
+							.tags
+								.tag /блог
+					.item.review-block
+						a(href="#")
+							.photo
+								img(src="img/promo-img3.jpg", alt="")
+							.text-block
+								.quotes
+									img(src="img/quotes_black.png", alt="")
+								.review-text мной заслужены особые привилегии «рывка» – это вдохновляет!
+								.lifestyle-img
+									img(src="img/lifestyle-img.png", alt="")
+								span.link фитнес-карта #[br] исключительных #[br] привилегий
+					.item
+						.photo
+							img(src="img/promo-img4.jpg", alt="")
+						.text 
+							a(href="#") «Рывок-кросс» открывает сезон дерзких уличных занятий
+							.tags
+								.tag /кросс
+					.item.promo-block
+						a(href="#")
+							.photo
+								img(src="img/promo-img5.jpg", alt="")
+							.text-block
+								.beat-img
+									include ../img/svg/menu-beat.svg
+								.promo-text а хочешь посещать «рывок-бит» со скидкой 50%?
+								.link #[span.link-text Пф, конечно хочу!]
+									include ../img/svg/dokinul-knopka-pff-default.svg
+					.item.big
+						.photo
+							img(src="img/promo-img6.jpg", alt="")
+						.text 
+							a(href="#") «Рывок-бит» снова покорил НСК «Олимпийский»!
+							.tags
+								.tag /блог
+								.tag /beat
+		.intro-menu
+			.close-button
+				.line.left
+				.line.right
+			.soc-icons
+				a(href="#")
+					include ../img/svg/fb-icon.svg
+				a(href="#")
+					include ../img/svg/insta-icon.svg
+			ul.menu-list
+				li
+					a(href="#") Я — Макс
+				li
+					a(href="#") Рывок-клуб
+				li
+					a(href="#") Карта "Рывок lifestyle"
+				li
+					a(href="#") Блог &amp; новости
+				li
+					a(href="#") О нас пишут
+				li
+					a(href="#") Контактная информация
+
+			.dev-info 
+				.text-wrapper
+					span.text Сайт триумфально создан в #[br] #[a(href="#") Студии Евгения Миллера]

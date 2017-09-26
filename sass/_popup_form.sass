@@ -1,0 +1,111 @@
+.popup-window-form, .popup-window-form-2
+	width: 900px
+	height: 625px
+	background: url('../img/popup-form-bg.png') no-repeat
+	background-size: 100% 100%
+	position: fixed
+	top: 50%	
+	padding: 0 70px
+	left: calc(50% + 82px)
+	z-index: 1000
+	transform: translate(-50%,-50%) scale3d(0,0,1)
+	transition: .6s
+	opacity: 0
+	&.visible
+		opacity: 1
+		transition: .6s
+		transform: translate(-50%,-50%) scale3d(1,1,1)
+	.screen-title
+		margin-bottom: 45px
+		margin-top: 30px
+	#popup_form
+		.form-element
+			width: calc(50% - 45px)
+			margin: 0 22px
+			margin-bottom: 30px
+			&.phone
+				width: 235px
+			&.text
+				width: calc(100% - 330px)
+
+.popup-window-form-2
+	width: 900px
+	height: 480px
+	background: url('../img/popup-form-bg.png') no-repeat
+	background-size: 100% 100%
+	position: fixed
+	top: 50%	
+	padding: 0 70px
+	left: calc(50% + 82px)
+	z-index: 1000
+	transform: translate(-50%,-50%) scale3d(0,0,1)
+	transition: .6s
+	opacity: 0
+	&.visible
+		opacity: 1
+		transition: .6s
+		transform: translate(-50%,-50%) scale3d(1,1,1)
+	.screen-title
+		margin-bottom: 45px
+		margin-top: 30px
+	#popup_form-2
+		.form-element
+			width: calc(50% - 45px)
+			margin: 0 22px
+			margin-bottom: 30px
+			&.phone
+				width: calc(33.3% - 45px)
+				.select-block
+					margin-bottom: 0
+			&.city
+				.select-block
+					z-index: 200
+			&.city, &.location
+				width: calc(33.3% - 45px)
+				.select-block
+					margin-bottom: 0
+					padding-left: 0
+					padding-right: 0
+				.input-wrapper
+					display: inline-block
+			&.text
+				width: calc(100% - 330px)
+
+.popup-thanks
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+	z-index: 100
+	top: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	background: rgba(0,0,0,.7)
+	border-radius: 10px
+	opacity: 0
+	transition: .6s
+	visibility: hidden
+	&.visible
+		opacity: 1
+		transition: .6s
+		visibility: visible
+	.text
+		font-family: "OswaldDemi",sans-serif
+		color: $main-site-color
+		font-size: 40px
+		text-shadow: 2px 2px 1px rgba(0,0,0,.7)
+
+
+.popup-background
+	background-color: transparent
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 112
+	display: none
+	&.visible
+		display: block
